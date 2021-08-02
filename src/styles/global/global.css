@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: Roboto Mono;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+nav {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px #494949;
+          box-shadow: 0 0 5px #494949;
+}
+
+nav .nav_title {
+  font-size: 1.2rem;
+}
+
+nav .nav_title a {
+  font-family: Fira Code;
+  color: #b762e8;
+  font-weight: 500;
+}
+
+nav .nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav .nav_links li {
+  margin: 0 10px;
+  list-style: none;
+  position: relative;
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+nav .nav_links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #78a7ff;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .nav_links li:hover::after {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+nav .nav_links li:hover a {
+  color: #78a7ff;
+}
+
+nav .nav_links li a {
+  color: #7c8a90;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .bars {
+  display: none;
+}
+
+nav .nav_active_link {
+  color: #78a7ff !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+  .container {
+    width: 95%;
+  }
+  nav .bars {
+    display: block;
+    z-index: 11;
+  }
+  nav .bars div {
+    width: 35px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 5px 0;
+    background: #000;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav .nav_links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 300px;
+    max-width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px #1e1e1e;
+            box-shadow: 0 0 5px #1e1e1e;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  nav .nav_links li {
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 2px solid #7c8a90;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav .nav_links li:first-child {
+    border-top: 2px solid #7c8a90;
+  }
+  nav .nav-active {
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
+  nav .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  nav .toggle .line2 {
+    opacity: 0;
+  }
+  nav .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+/*# sourceMappingURL=global.css.map */

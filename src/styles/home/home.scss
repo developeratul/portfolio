@@ -1,0 +1,121 @@
+@import "../partials/imports";
+
+.home_page {
+  // * the header
+  header {
+    min-height: 92vh;
+    padding: 50px 0;
+    background: url(https://res.cloudinary.com/devr-static-assets-db/image/upload/v1627798690/DevR-portfolio/backgrounds/headerBackgroung_sffha3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    position: relative;
+    .header_content_wrapper {
+      width: 100%;
+      @include flexBetween();
+      .header_desc {
+        width: 340px;
+        .tagline {
+          color: $themeSecondaryColor;
+        }
+        h1 {
+          font-size: 2rem;
+          font-family: Fira Code;
+          font-weight: 500;
+          background: linear-gradient(
+            to right,
+            $themeColor 10%,
+            $themeSecondaryColor
+          );
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .bio {
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        .header_buttons {
+          @include flexCenter();
+          justify-content: flex-start;
+          .single_button {
+            &:first-child {
+              margin-right: 10px;
+            }
+            button {
+              padding: 7px 30px;
+              color: #fff;
+            }
+          }
+          .view_work_button {
+            button {
+              background: $themeColor;
+            }
+          }
+          .hire_me_button {
+            button {
+              background: $themeSecondaryColor;
+            }
+          }
+        }
+      }
+
+      .header_img {
+        width: 360px;
+        img {
+          width: 100%;
+          filter: drop-shadow(0 0 5px #1e1e1e);
+        }
+      }
+    }
+
+    .header_svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      img {
+        width: 100%;
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home_page {
+    header {
+      .header_content_wrapper {
+        .header_desc {
+          width: 300px;
+        }
+
+        .header_img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home_page {
+    header {
+      .header_content_wrapper {
+        .header_desc {
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+          margin-bottom: 30px;
+        }
+
+        .header_img {
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

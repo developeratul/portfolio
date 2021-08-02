@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+.home_page header {
+  min-height: 92vh;
+  padding: 50px 0;
+  background: url(https://res.cloudinary.com/devr-static-assets-db/image/upload/v1627798690/DevR-portfolio/backgrounds/headerBackgroung_sffha3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.home_page header .header_content_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page header .header_content_wrapper .header_desc {
+  width: 340px;
+}
+
+.home_page header .header_content_wrapper .header_desc .tagline {
+  color: #78a7ff;
+}
+
+.home_page header .header_content_wrapper .header_desc h1 {
+  font-size: 2rem;
+  font-family: Fira Code;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b762e8), to(#78a7ff));
+  background: linear-gradient(to right, #b762e8 10%, #78a7ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home_page header .header_content_wrapper .header_desc .bio {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .single_button:first-child {
+  margin-right: 10px;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .single_button button {
+  padding: 7px 30px;
+  color: #fff;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .view_work_button button {
+  background: #b762e8;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .hire_me_button button {
+  background: #78a7ff;
+}
+
+.home_page header .header_content_wrapper .header_img {
+  width: 360px;
+}
+
+.home_page header .header_content_wrapper .header_img img {
+  width: 100%;
+  -webkit-filter: drop-shadow(0 0 5px #1e1e1e);
+          filter: drop-shadow(0 0 5px #1e1e1e);
+}
+
+.home_page header .header_svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.home_page header .header_svg img {
+  width: 100%;
+  fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_page header .header_content_wrapper .header_desc {
+    width: 300px;
+  }
+  .home_page header .header_content_wrapper .header_img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home_page header .header_content_wrapper .header_desc {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .home_page header .header_content_wrapper .header_img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=home.css.map */
