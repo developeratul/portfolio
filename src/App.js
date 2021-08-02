@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // components
@@ -11,11 +11,9 @@ import Home from "./pages/Home";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    window.addEventListener("load", function () {
-      setLoading(false);
-    });
-  }, []);
+  window.addEventListener("load", function () {
+    setLoading(false);
+  });
 
   if (loading) {
     return <Loader />;

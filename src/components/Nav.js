@@ -8,6 +8,7 @@ const Nav = () => {
 
   const { pathname } = useLocation();
 
+  // for toggling the nav in mobile and tablet type devices
   function ToggleNav() {
     const bars = barsRef.current;
     const listNav = listNavRef.current;
@@ -19,8 +20,10 @@ const Nav = () => {
 
   window.addEventListener("scroll", function () {
     const nav = navRef.current;
-    const headerHeight = document.querySelector("header").scrollHeight;
-    nav.classList.toggle("stickyNav", this.window.scrollY > headerHeight);
+    nav.classList.toggle(
+      "stickyNav",
+      this.window.scrollY > document.querySelector("header").scrollHeight
+    );
   });
 
   return (

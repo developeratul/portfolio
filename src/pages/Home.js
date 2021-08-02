@@ -8,6 +8,7 @@ import About from "../components/Home/About";
 const Home = () => {
   useEffect(() => {
     document.title = "DevR | Home";
+    window.scrollTo(0, 0);
   }, []);
 
   return (
