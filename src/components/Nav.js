@@ -1,10 +1,12 @@
 import { useRef } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
   const barsRef = useRef();
   const listNavRef = useRef();
   const navRef = useRef();
+
+  const { pathname } = useLocation();
 
   function ToggleNav() {
     const bars = barsRef.current;
@@ -17,11 +19,12 @@ const Nav = () => {
 
   window.addEventListener("scroll", function () {
     const nav = navRef.current;
-    nav.classList.toggle("stickyNav", this.window.scrollY > 0);
+    const headerHeight = document.querySelector("header").scrollHeight;
+    nav.classList.toggle("stickyNav", this.window.scrollY > headerHeight);
   });
 
   return (
-    <nav ref={navRef}>
+    <nav ref={navRef} className={pathname !== "/" ? "stickyNav" : null}>
       <h2 className="nav_title">
         <Link to="/">devr()</Link>
       </h2>

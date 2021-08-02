@@ -16,7 +16,7 @@
       width: 100%;
       @include flexBetween();
       .header_desc {
-        width: 340px;
+        width: 400px;
         .tagline {
           color: $themeSecondaryColor;
         }
@@ -35,6 +35,7 @@
         .bio {
           color: #fff;
           margin-bottom: 20px;
+          font-weight: 400;
         }
         .header_buttons {
           @include flexCenter();
@@ -65,7 +66,7 @@
         width: 360px;
         img {
           width: 100%;
-          filter: drop-shadow(0 0 5px #1e1e1e);
+          filter: drop-shadow(0 0 2px $themeSecondaryColor);
         }
       }
     }
@@ -78,6 +79,52 @@
       img {
         width: 100%;
         fill: #fff;
+      }
+    }
+  }
+
+  // * the about section
+  .about_section {
+    padding: 50px 0;
+    .about_section_content_wrapper {
+      @include flexBetween();
+      .about_img {
+        width: 400px;
+        img {
+          width: 100%;
+          border-radius: 5px;
+          box-shadow: 5px 10px 10px $gray;
+        }
+      }
+
+      .about_desc {
+        width: 550px;
+        h2 {
+          font-size: 1.5rem;
+          font-family: Fira Code;
+          color: $themeColor;
+          margin-bottom: 5px;
+          text-shadow: 0.5px 0.5px 3px $themeColor;
+        }
+        p {
+          text-align: justify;
+          text-justify: inter-character;
+          margin-bottom: 10px;
+          color: $gray;
+        }
+        .about_section_button {
+          a {
+            button {
+              background: linear-gradient(
+                45deg,
+                $themeColor,
+                $themeSecondaryColor
+              );
+              padding: 7px 20px;
+              color: #fff;
+            }
+          }
+        }
       }
     }
   }
@@ -96,6 +143,17 @@
         }
       }
     }
+
+    .about_section {
+      .about_section_content_wrapper {
+        .about_img {
+          width: 300px;
+        }
+        .about_desc {
+          width: 370px;
+        }
+      }
+    }
   }
 }
 
@@ -103,9 +161,12 @@
   .home_page {
     header {
       .header_content_wrapper {
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
         .header_desc {
           width: 100%;
-          max-width: 300px;
+          max-width: 400px;
           margin: auto;
           margin-bottom: 30px;
         }
@@ -114,6 +175,28 @@
           width: 100%;
           max-width: 300px;
           margin: auto;
+        }
+      }
+    }
+
+    .about_section {
+      .about_section_content_wrapper {
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        .about_img {
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+        .about_desc {
+          width: 100%;
+          max-width: 500px;
+          margin: auto;
+          p {
+            text-align: left;
+          }
         }
       }
     }

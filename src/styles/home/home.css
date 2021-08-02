@@ -29,7 +29,7 @@
 }
 
 .home_page header .header_content_wrapper .header_desc {
-  width: 340px;
+  width: 400px;
 }
 
 .home_page header .header_content_wrapper .header_desc .tagline {
@@ -49,6 +49,7 @@
 .home_page header .header_content_wrapper .header_desc .bio {
   color: #fff;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .home_page header .header_content_wrapper .header_desc .header_buttons {
@@ -91,8 +92,8 @@
 
 .home_page header .header_content_wrapper .header_img img {
   width: 100%;
-  -webkit-filter: drop-shadow(0 0 5px #1e1e1e);
-          filter: drop-shadow(0 0 5px #1e1e1e);
+  -webkit-filter: drop-shadow(0 0 2px #78a7ff);
+          filter: drop-shadow(0 0 2px #78a7ff);
 }
 
 .home_page header .header_svg {
@@ -107,6 +108,60 @@
   fill: #fff;
 }
 
+.home_page .about_section {
+  padding: 50px 0;
+}
+
+.home_page .about_section .about_section_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_img {
+  width: 400px;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_img img {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 10px 10px #5a5a5a;
+          box-shadow: 5px 10px 10px #5a5a5a;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc {
+  width: 550px;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc h2 {
+  font-size: 1.5rem;
+  font-family: Fira Code;
+  color: #b762e8;
+  margin-bottom: 5px;
+  text-shadow: 0.5px 0.5px 3px #b762e8;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc p {
+  text-align: justify;
+  text-justify: inter-character;
+  margin-bottom: 10px;
+  color: #5a5a5a;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc .about_section_button a button {
+  background: linear-gradient(45deg, #b762e8, #78a7ff);
+  padding: 7px 20px;
+  color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .home_page header .header_content_wrapper .header_desc {
     width: 300px;
@@ -114,12 +169,30 @@
   .home_page header .header_content_wrapper .header_img {
     width: 300px;
   }
+  .home_page .about_section .about_section_content_wrapper .about_img {
+    width: 300px;
+  }
+  .home_page .about_section .about_section_content_wrapper .about_desc {
+    width: 370px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .home_page header .header_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .home_page header .header_content_wrapper .header_desc {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     margin: auto;
     margin-bottom: 30px;
   }
@@ -127,6 +200,32 @@
     width: 100%;
     max-width: 300px;
     margin: auto;
+  }
+  .home_page .about_section .about_section_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home_page .about_section .about_section_content_wrapper .about_img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .home_page .about_section .about_section_content_wrapper .about_desc {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  .home_page .about_section .about_section_content_wrapper .about_desc p {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=home.css.map */
