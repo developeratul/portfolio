@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 const Nav = () => {
   const barsRef = useRef();
   const listNavRef = useRef();
+  const navRef = useRef();
 
   function ToggleNav() {
     const bars = barsRef.current;
@@ -14,8 +15,13 @@ const Nav = () => {
     document.body.classList.toggle("no-scroll");
   }
 
+  window.addEventListener("scroll", function () {
+    const nav = navRef.current;
+    nav.classList.toggle("stickyNav", this.window.scrollY > 0);
+  });
+
   return (
-    <nav>
+    <nav ref={navRef}>
       <h2 className="nav_title">
         <Link to="/">devr()</Link>
       </h2>
