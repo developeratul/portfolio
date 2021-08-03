@@ -3,7 +3,7 @@
 .home_page header {
   min-height: 100vh;
   padding: 100px 0;
-  background: url(https://res.cloudinary.com/devr-static-assets-db/image/upload/v1627798690/DevR-portfolio/backgrounds/headerBackgroung_sffha3.png);
+  background: url(../../assets/Header.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

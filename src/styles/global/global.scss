@@ -10,12 +10,12 @@
   font-weight: 500;
 }
 
-body,
-html {
-  overflow-x: hidden !important;
-}
 html {
   scroll-behavior: smooth;
+}
+body {
+  overflow-x: none;
+  width: 100%;
 }
 button {
   font-weight: 400 !important;
@@ -48,6 +48,7 @@ h2 {
   }
 }
 
+// the nav
 nav {
   padding: 10px 0;
   @include flexAround();
@@ -97,9 +98,47 @@ nav {
   }
 }
 
+// the footer
+.footer {
+  padding: 20px 0;
+  background: $bgColor;
+  color: #fff;
+  .footer_content_wrapper {
+    @include flexBetween();
+    .footer_logo {
+      width: 70px;
+      img {
+        width: 100%;
+        filter: drop-shadow(1px 1px 3px $gray);
+      }
+    }
+
+    .copyright {
+      span {
+        color: #ff1100;
+      }
+    }
+
+    .footer_links {
+      @include flexBetween();
+      li {
+        list-style: none;
+        margin: 0 10px;
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
 // the loader
 .loader {
   min-height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 12;
+  transition: 0.3s;
   background: linear-gradient(-45deg, $themeSecondaryColor, $themeColor);
   @include flexCenter();
   .loader_container {
@@ -435,6 +474,14 @@ nav {
     }
     .toggle .line3 {
       transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  .footer {
+    .footer_content_wrapper {
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px 0;
     }
   }
 }

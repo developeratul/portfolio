@@ -2,32 +2,32 @@
 
 import { useEffect } from "react";
 
-const Loader = () => {
+const Loader = ({ loaderRef }) => {
   useEffect(() => {
     document.title = "DevR | Loading...";
   }, []);
 
   return (
-    <div className="loader">
+    <div className="loader" ref={loaderRef}>
       <div className="container">
         <div className="loader_container">
-          <div class="animation-container">
-            <div class="lightning-container">
-              <div class="lightning white"></div>
-              <div class="lightning red"></div>
+          <div className="animation-container">
+            <div className="lightning-container">
+              <div className="lightning white"></div>
+              <div className="lightning red"></div>
             </div>
-            <div class="boom-container">
-              <div class="shape circle big white"></div>
-              <div class="shape circle white"></div>
-              <div class="shape triangle big yellow"></div>
-              <div class="shape disc white"></div>
-              <div class="shape triangle blue"></div>
+            <div className="boom-container">
+              <div className="shape circle big white"></div>
+              <div className="shape circle white"></div>
+              <div className="shape triangle big yellow"></div>
+              <div className="shape disc white"></div>
+              <div className="shape triangle blue"></div>
             </div>
-            <div class="boom-container second">
-              <div class="shape circle big white"></div>
-              <div class="shape circle white"></div>
-              <div class="shape disc white"></div>
-              <div class="shape triangle blue"></div>
+            <div className="boom-container second">
+              <div className="shape circle big white"></div>
+              <div className="shape circle white"></div>
+              <div className="shape disc white"></div>
+              <div className="shape triangle blue"></div>
             </div>
           </div>
 

@@ -11,13 +11,13 @@
   font-weight: 500;
 }
 
-body,
-html {
-  overflow-x: hidden !important;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: none;
+  width: 100%;
 }
 
 button {
@@ -128,8 +128,70 @@ nav .nav_active_link {
   color: #78a7ff !important;
 }
 
+.footer {
+  padding: 20px 0;
+  background: #181e23;
+  color: #fff;
+}
+
+.footer .footer_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .footer_content_wrapper .footer_logo {
+  width: 70px;
+}
+
+.footer .footer_content_wrapper .footer_logo img {
+  width: 100%;
+  -webkit-filter: drop-shadow(1px 1px 3px #5a5a5a);
+          filter: drop-shadow(1px 1px 3px #5a5a5a);
+}
+
+.footer .footer_content_wrapper .copyright span {
+  color: #ff1100;
+}
+
+.footer .footer_content_wrapper .footer_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .footer_content_wrapper .footer_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.footer .footer_content_wrapper .footer_links li span {
+  font-size: 1.4rem;
+}
+
 .loader {
   min-height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 12;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: linear-gradient(-45deg, #78a7ff, #b762e8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -624,6 +686,16 @@ nav .nav_active_link {
   nav .toggle .line3 {
     -webkit-transform: rotate(45deg) translate(-5px, -6px);
             transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .footer .footer_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px 0;
   }
 }
 /*# sourceMappingURL=global.css.map */

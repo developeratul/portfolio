@@ -1,19 +1,18 @@
 import { Button } from "@chakra-ui/react";
 import links from "../../data/links";
+import assets from "../../data/assets";
 
 const About = () => {
   const experience = new Date().getFullYear() - 2019;
   const { github } = links;
+  const { logo } = assets;
 
   return (
     <section className="about_section">
       <div className="container">
         <div className="about_section_content_wrapper">
           <div className="about_img">
-            <img
-              src="https://res.cloudinary.com/devr-static-assets-db/image/upload/v1627897625/DevR-portfolio/DevR_oysp1i.png"
-              alt="DevR official logo"
-            />
+            <img src={logo} alt="DevR official logo" />
           </div>
 
           <div className="about_desc">
