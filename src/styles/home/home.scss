@@ -1,6 +1,7 @@
 @import "../partials/imports";
 
 .home_page {
+  overflow-x: hidden;
   // * the header
   header {
     min-height: 100vh;
