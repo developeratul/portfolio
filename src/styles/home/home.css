@@ -229,8 +229,8 @@ button {
 
 .home_page .portfolio_section .portfolio_card_container .single_card {
   width: 320px;
-  -webkit-box-shadow: 1px 2px 10px #8697a8;
-          box-shadow: 1px 2px 10px #8697a8;
+  -webkit-box-shadow: 1px 1px 7px 0px #8697a8;
+          box-shadow: 1px 1px 7px 0px #8697a8;
   padding: 10px;
   border-radius: 5px;
   margin: 10px 0;
