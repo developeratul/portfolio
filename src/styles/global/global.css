@@ -16,20 +16,11 @@ html {
 }
 
 body {
-  overflow-x: none;
-  width: 100%;
+  overflow-x: hidden;
 }
 
 button {
   font-weight: 400 !important;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
 }
 
 .container {
@@ -49,6 +40,29 @@ h2 {
 
 .stickyNav .nav_links li a {
   color: #5a5a5a;
+}
+
+.section_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section_title h2 {
+  font-size: 2rem;
+  color: #5a5a5a;
+}
+
+.section_title p {
+  margin-bottom: 10px;
+}
+
+.section_title .line {
+  width: 150px;
+  margin: auto;
+}
+
+.section_title .line img {
+  width: 100%;
 }
 
 nav {
@@ -154,8 +168,6 @@ nav .nav_active_link {
 
 .footer .footer_content_wrapper .footer_logo img {
   width: 100%;
-  -webkit-filter: drop-shadow(1px 1px 3px #5a5a5a);
-          filter: drop-shadow(1px 1px 3px #5a5a5a);
 }
 
 .footer .footer_content_wrapper .copyright span {

@@ -20,9 +20,15 @@ const Nav = () => {
 
   window.addEventListener("scroll", function () {
     const nav = navRef.current;
-    nav.classList.toggle("stickyNav", this.window.scrollY > 0);
+
+    if (pathname !== "/") {
+      nav.classList.add("stickyNav");
+    } else {
+      nav.classList.toggle("stickyNav", this.window.scrollY > 0);
+    }
   });
 
+  // adding the sticky nav class to each pages without the home page
   useEffect(() => {
     const nav = navRef.current;
     nav.classList.toggle("stickyNav", pathname !== "/");
@@ -36,7 +42,7 @@ const Nav = () => {
 
       <ul className="nav_links" ref={listNavRef}>
         <li>
-          <NavLink exact activeClassName="nav_active_link" to="/">
+          <NavLink exact activeClassName="nav_active_link" to="/#">
             Home
           </NavLink>
         </li>
@@ -46,13 +52,8 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="nav_active_link" to="/blog">
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="nav_active_link" to="/contact">
-            Contact
+          <NavLink activeClassName="nav_active_link" to="/portfolio">
+            Portfolio
           </NavLink>
         </li>
       </ul>

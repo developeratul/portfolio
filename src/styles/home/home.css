@@ -1,5 +1,47 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: Roboto Mono;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  font-weight: 400 !important;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.stickyNav {
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px #5a5a5a;
+          box-shadow: 0 0 5px #5a5a5a;
+}
+
+.stickyNav .nav_links li a {
+  color: #5a5a5a;
+}
+
 .home_page header {
   min-height: 100vh;
   padding: 100px 0;
@@ -162,6 +204,112 @@
   color: #fff;
 }
 
+.home_page .portfolio_section {
+  padding: 50px 0;
+  background: #f6fdff;
+}
+
+.home_page .portfolio_section .portfolio_card_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card {
+  width: 320px;
+  -webkit-box-shadow: 1px 2px 10px #8697a8;
+          box-shadow: 1px 2px 10px #8697a8;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #fff;
+  overflow: hidden;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card:hover .card_image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_image {
+  width: 100%;
+  height: 200px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc h2 {
+  font-size: 1.5rem;
+  color: #b762e8;
+  font-family: Fira Code;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons .single_button:first-child {
+  margin-right: 10px;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons .single_button:first-child button {
+  background: #000;
+  color: #fff;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons .single_button button {
+  padding: 0 30px;
+  background: #78a7ff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons .single_button button span {
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 1024px) {
   .home_page header .header_content_wrapper .header_desc {
     width: 300px;
@@ -169,11 +317,24 @@
   .home_page header .header_content_wrapper .header_img {
     width: 300px;
   }
+  .home_page .about_section .about_section_content_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .home_page .about_section .about_section_content_wrapper .about_img {
     width: 300px;
+    margin-bottom: 20px;
   }
   .home_page .about_section .about_section_content_wrapper .about_desc {
-    width: 370px;
+    width: 100%;
+  }
+  .home_page .portfolio_section .portfolio_card_container .single_card {
+    width: 340px;
   }
 }
 
@@ -226,6 +387,20 @@
   }
   .home_page .about_section .about_section_content_wrapper .about_desc p {
     text-align: left;
+  }
+  .home_page .portfolio_section .portfolio_card_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home_page .portfolio_section .portfolio_card_container .single_card {
+    width: 100%;
+    margin: 10px 0;
+    max-width: 340px;
   }
 }
 /*# sourceMappingURL=home.css.map */

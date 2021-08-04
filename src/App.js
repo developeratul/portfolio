@@ -14,14 +14,10 @@ const App = () => {
 
   window.addEventListener("load", function () {
     const loader = loaderRef.current;
-
-    // once the page has loaded I wanna take one more second
+    loader.style.transform = "translate(-100%)";
     this.setTimeout(() => {
-      loader.style.transform = "translate(-100%)";
-      this.setTimeout(() => {
-        loader.style.display = "none";
-      }, 500);
-    }, 1000);
+      loader.style.display = "none";
+    }, 500);
   });
 
   return (

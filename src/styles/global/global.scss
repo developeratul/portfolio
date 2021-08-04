@@ -1,49 +1,21 @@
 @import "../partials/imports";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-  font-family: Roboto Mono;
-  font-weight: 500;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-body {
-  overflow-x: none;
-  width: 100%;
-}
-button {
-  font-weight: 400 !important;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-
-.container {
-  width: 1000px;
-  margin: auto;
-}
-
-.no-scroll {
-  overflow-y: hidden;
-}
-
-.stickyNav {
-  background: #fff;
-  box-shadow: 0 0 5px $gray;
-  .nav_links {
-    li {
-      a {
-        color: $gray;
-      }
+// the section title
+.section_title {
+  text-align: center;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 2rem;
+    color: $gray;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .line {
+    width: 150px;
+    margin: auto;
+    img {
+      width: 100%;
     }
   }
 }
@@ -109,7 +81,6 @@ nav {
       width: 70px;
       img {
         width: 100%;
-        filter: drop-shadow(1px 1px 3px $gray);
       }
     }
 

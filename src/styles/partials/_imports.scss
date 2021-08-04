@@ -3,3 +3,45 @@
 
 @import "./mixin";
 @import "./var";
+
+// common css over the whole app
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: Roboto Mono;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+button {
+  font-weight: 400 !important;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.stickyNav {
+  background: #fff;
+  box-shadow: 0 0 5px $gray;
+  .nav_links {
+    li {
+      a {
+        color: $gray;
+      }
+    }
+  }
+}

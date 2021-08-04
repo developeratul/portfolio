@@ -8,14 +8,22 @@ const About = () => {
   const { logo } = assets;
 
   return (
-    <section className="about_section">
+    <section className="about_section" id="about">
       <div className="container">
         <div className="about_section_content_wrapper">
-          <div className="about_img">
+          <div
+            className="about_img"
+            data-aos="fade-right"
+            data-aos-duration="4000"
+          >
             <img src={logo} alt="DevR official logo" />
           </div>
 
-          <div className="about_desc">
+          <div
+            className="about_desc"
+            data-aos="fade-up"
+            data-aos-duration="4000"
+          >
             <h2>Few words about me</h2>
             <p>
               Hi there. I am Ratul. I am a full-stack developer from Bangladesh.
