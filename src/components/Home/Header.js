@@ -19,7 +19,9 @@ const Header = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <Button variant="solid">Works</Button>
+                <a href="#portfolio">
+                  <Button variant="solid">Works</Button>
+                </a>
               </div>
 
               <div

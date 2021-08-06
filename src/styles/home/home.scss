@@ -2,6 +2,10 @@
 
 .home_page {
   overflow-x: hidden;
+  section {
+    scroll-margin-top: 70px;
+    overflow: hidden;
+  }
   // * the header
   header {
     min-height: 100vh;
@@ -138,7 +142,7 @@
       @include flexBetween();
       .single_card {
         width: 320px;
-        box-shadow: 1px 1px 7px 0px #8697a8;
+        box-shadow: 3px 3px 10px 3px #8697a82a;
         padding: 10px;
         border-radius: 5px;
         margin: 10px 0;
@@ -162,9 +166,8 @@
         }
         .card_desc {
           h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: $themeColor;
-            font-family: Fira Code;
           }
           .card_buttons {
             margin-top: 10px;
@@ -188,6 +191,44 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  // * the services section
+  .services_section {
+    padding: 50px 0;
+    .services_wrapper {
+      @include flexBetween();
+      align-items: stretch;
+      .single_service {
+        width: 320px;
+        box-shadow: 3px 3px 10px 3px #8697a82a;
+        border-radius: 5px;
+        padding: 30px 10px;
+        display: grid;
+        align-items: center;
+        transition: 0.3s;
+        &:hover {
+          transform: translateY(-5px);
+        }
+        .service_img {
+          width: 100px;
+          max-width: 70%;
+          margin: auto;
+          margin-bottom: 10px;
+          img {
+            width: 100%;
+          }
+        }
+        .service_desc {
+          text-align: center;
+          h2 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: $themeColor;
           }
         }
       }
@@ -227,6 +268,15 @@
       .portfolio_card_container {
         .single_card {
           width: 340px;
+        }
+      }
+    }
+
+    .services_section {
+      .services_wrapper {
+        justify-content: center;
+        .single_service {
+          margin: 10px;
         }
       }
     }
@@ -285,6 +335,18 @@
           width: 100%;
           margin: 10px 0;
           max-width: 340px;
+        }
+      }
+    }
+
+    .services_section {
+      .services_wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .single_service {
+          margin: 10px 0;
+          max-width: 100%;
         }
       }
     }

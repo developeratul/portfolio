@@ -42,7 +42,12 @@ const Nav = () => {
 
       <ul className="nav_links" ref={listNavRef}>
         <li>
-          <NavLink exact activeClassName="nav_active_link" to="/#">
+          <NavLink
+            onClick={() => window.scrollTo(0, 0)}
+            exact
+            activeClassName="nav_active_link"
+            to="/#"
+          >
             Home
           </NavLink>
         </li>
@@ -51,6 +56,9 @@ const Nav = () => {
         </li>
         <li>
           <a href="/#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="/#services">Services</a>
         </li>
       </ul>
 

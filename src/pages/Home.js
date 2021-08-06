@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Header from "../components/Home/Header";
 import About from "../components/Home/About";
 import Portfolio from "../components/Home/Portfolio";
+import Services from "../components/Home/Services";
 
 const Home = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const Home = () => {
       <Header />
       <About />
       <Portfolio />
+      <Services />
     </div>
   );
 };
