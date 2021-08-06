@@ -47,9 +47,10 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="nav_active_link" to="/uses">
-            Uses
-          </NavLink>
+          <a href="/#about">About</a>
+        </li>
+        <li>
+          <a href="/#portfolio">Portfolio</a>
         </li>
       </ul>
 
