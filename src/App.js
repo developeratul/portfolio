@@ -4,10 +4,11 @@ import { useRef } from "react";
 // components
 import Nav from "./components/Nav";
 import Loader from "./components/Loader";
+import Footer from "./components/Footer";
 
 // pages
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import Uses from "./pages/Uses";
 
 const App = () => {
   const loaderRef = useRef();
@@ -27,6 +28,9 @@ const App = () => {
 
       <Switch>
         <Route path="/" exact component={Home} />
+      </Switch>
+      <Switch>
+        <Route path="/uses" component={Uses} />
       </Switch>
 
       <Footer />

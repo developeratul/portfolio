@@ -47,13 +47,8 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="nav_active_link" to="/about">
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="nav_active_link" to="/portfolio">
-            Portfolio
+          <NavLink activeClassName="nav_active_link" to="/uses">
+            Uses
           </NavLink>
         </li>
       </ul>
