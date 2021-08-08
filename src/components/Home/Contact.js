@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   Input,
   InputGroup,
@@ -8,15 +8,15 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { UserOutlined, MailOutlined, CoffeeOutlined } from "@ant-design/icons";
+import emailJs from "emailjs-com";
 
 const Contact = () => {
   const [message, setMessage] = useState({
-    username: "",
+    name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const formRef = useRef();
   const toast = useToast();
 
   function HandleInputChange(event) {
@@ -25,18 +25,24 @@ const Contact = () => {
   }
 
   async function HandleSubmit(e) {
+    e.preventDefault();
+    const { name, email, subject, message: theMessage } = message;
+
     try {
-      e.preventDefault();
-      const contactForm = formRef.current;
-      const formData = new FormData(contactForm);
+      if (!name || !email || !subject || !theMessage) {
+        toast({
+          title: "Please fill all the fields properly",
+          status: "warning",
+        });
+      } else {
+        await emailJs.sendForm(
+          "service_uts1etd",
+          "template_ny7lv63",
+          e.target,
+          "user_zGeUyLyIuKUUZcFkwbMZy"
+        );
 
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-
-      if (res.ok) {
+        setMessage({ name: "", email: "", subject: "", message: "" });
         toast({ title: "Your message was sent", status: "success" });
       }
     } catch (err) {
@@ -51,22 +57,16 @@ const Contact = () => {
           <div className="contact_form" data-aos="fade-right">
             <h2 className="form_title">Contact Me</h2>
 
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              onSubmit={HandleSubmit}
-              ref={formRef}
-            >
+            <form onSubmit={(e) => HandleSubmit(e)}>
               <div className="single_field">
                 <InputGroup type="text">
                   <InputLeftElement
                     children={<UserOutlined color="gray.300" />}
                   />
                   <Input
-                    name="username"
+                    name="name"
                     onChange={HandleInputChange}
-                    value={message.username}
+                    value={message.name}
                     placeholder="Your name"
                   />
                 </InputGroup>
