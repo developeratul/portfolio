@@ -6,10 +6,12 @@
   margin-bottom: 50px;
   h2 {
     font-size: 2rem;
-    color: $gray;
+    color: $themeSecondaryColor;
+    font-weight: 400;
   }
   p {
     margin-bottom: 10px;
+    color: $gray;
   }
   .line {
     width: 150px;
@@ -29,8 +31,8 @@ nav {
   right: 0;
   left: 0;
   z-index: 10;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.541);
-  background: rgba(255, 255, 255, 0.288);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.123);
+  background: rgba(255, 255, 255, 0.123);
   backdrop-filter: blur(20px);
   transition: 0.3s;
   .nav_title {
@@ -57,6 +59,7 @@ nav {
         color: #fff;
         transition: 0.3s;
         letter-spacing: 0.5px;
+        font-weight: 400;
       }
     }
   }

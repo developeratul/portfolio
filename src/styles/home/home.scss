@@ -3,7 +3,6 @@
 .home_page {
   overflow-x: hidden;
   section {
-    scroll-margin-top: 70px;
     overflow: hidden;
   }
   // * the header
@@ -24,11 +23,12 @@
         width: 400px;
         .tagline {
           color: $themeSecondaryColor;
+          font-weight: 400;
         }
         h1 {
           font-size: 2rem;
           font-family: Fira Code;
-          font-weight: 500;
+          font-weight: 400;
           background: linear-gradient(
             to right,
             $themeColor 10%,
@@ -52,16 +52,26 @@
             button {
               padding: 7px 30px;
               color: #fff;
+              position: relative;
+              overflow: hidden;
+              transition: 0.3s;
+              @include buttonStyle;
             }
           }
           .view_work_button {
             button {
               background: $themeColor;
+              &:hover {
+                color: $themeColor;
+              }
             }
           }
           .hire_me_button {
             button {
               background: $themeSecondaryColor;
+              &:hover {
+                color: $themeSecondaryColor;
+              }
             }
           }
         }
@@ -71,7 +81,6 @@
         width: 360px;
         img {
           width: 100%;
-          filter: drop-shadow(0 0 2px $themeSecondaryColor);
         }
       }
     }
@@ -98,7 +107,7 @@
         img {
           width: 100%;
           border-radius: 5px;
-          box-shadow: 5px 10px 10px $gray;
+          box-shadow: 3px 5px 10px rgb(46, 46, 46);
         }
       }
 
@@ -106,14 +115,12 @@
         width: 550px;
         h2 {
           font-size: 1.5rem;
-          font-family: Fira Code;
-          color: $themeColor;
+          color: $themeSecondaryColor;
           margin-bottom: 5px;
-          text-shadow: 0.5px 0.5px 3px $themeColor;
         }
         p {
           text-align: justify;
-          text-justify: inter-character;
+          text-justify: revert;
           margin-bottom: 10px;
           color: $gray;
         }
@@ -125,8 +132,13 @@
                 $themeColor,
                 $themeSecondaryColor
               );
+              transition: 0.3s;
               padding: 7px 20px;
               color: #fff;
+              @include buttonStyle();
+              &::after {
+                background: $themeSecondaryColor;
+              }
             }
           }
         }
@@ -142,7 +154,7 @@
       @include flexBetween();
       .single_card {
         width: 320px;
-        box-shadow: 3px 3px 10px 3px #8697a82a;
+        box-shadow: 3px 3px 10px 3px $shadowColor;
         padding: 10px;
         border-radius: 5px;
         margin: 10px 0;
@@ -205,7 +217,7 @@
       align-items: stretch;
       .single_service {
         width: 320px;
-        box-shadow: 3px 3px 10px 3px #8697a82a;
+        box-shadow: 3px 3px 10px 3px $shadowColor;
         border-radius: 5px;
         padding: 30px 10px;
         display: grid;
@@ -230,6 +242,42 @@
             margin-bottom: 5px;
             color: $themeColor;
           }
+        }
+      }
+    }
+  }
+
+  // * the contact section
+  .contact_section {
+    padding: 50px 0;
+    .contact_section_content_wrapper {
+      @include flexBetween();
+      .contact_form {
+        width: 500px;
+        .form_title {
+          font-size: 1.5rem;
+          color: $themeSecondaryColor;
+          margin-bottom: 10px;
+        }
+        form {
+          .single_field {
+            margin: 10px 0;
+            width: 100%;
+            textarea {
+              resize: none;
+              height: 200px;
+            }
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .contact_right_image {
+        width: 450px;
+        img {
+          width: 100%;
         }
       }
     }
@@ -277,6 +325,25 @@
         justify-content: center;
         .single_service {
           margin: 10px;
+        }
+      }
+    }
+
+    .contact_section {
+      .contact_section_content_wrapper {
+        .contact_form {
+          width: 350px;
+          form {
+            .single_field {
+              textarea {
+                height: 100px;
+              }
+            }
+          }
+        }
+
+        .contact_right_image {
+          width: 300px;
         }
       }
     }
@@ -333,8 +400,8 @@
         justify-content: center;
         .single_card {
           width: 100%;
+          max-width: 400px;
           margin: 10px 0;
-          max-width: 340px;
         }
       }
     }
@@ -347,6 +414,31 @@
         .single_service {
           margin: 10px 0;
           max-width: 100%;
+        }
+      }
+    }
+
+    .contact_section {
+      .contact_section_content_wrapper {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        .contact_form {
+          width: 100%;
+          max-width: 400px;
+          form {
+            .single_field {
+              textarea {
+                height: 100px;
+              }
+            }
+          }
+        }
+
+        .contact_right_image {
+          margin-bottom: 30px;
+          width: 100%;
+          max-width: 400px;
         }
       }
     }

@@ -29,7 +29,9 @@ const Header = () => {
                 data-aos-delay="500"
                 className="single_button hire_me_button"
               >
-                <Button variant="solid">Hire Me</Button>
+                <a href="#hire_or_contact">
+                  <Button variant="solid">Hire Me</Button>
+                </a>
               </div>
             </div>
           </div>

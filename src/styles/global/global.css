@@ -34,8 +34,8 @@ button {
 
 .stickyNav {
   background: #fff;
-  -webkit-box-shadow: 0 0 5px #5a5a5a;
-          box-shadow: 0 0 5px #5a5a5a;
+  -webkit-box-shadow: 0 0 5px #8697a879;
+          box-shadow: 0 0 5px #8697a879;
 }
 
 .stickyNav .nav_links li a {
@@ -49,11 +49,13 @@ button {
 
 .section_title h2 {
   font-size: 2rem;
-  color: #5a5a5a;
+  color: #00b7ff;
+  font-weight: 400;
 }
 
 .section_title p {
   margin-bottom: 10px;
+  color: #5a5a5a;
 }
 
 .section_title .line {
@@ -82,9 +84,9 @@ nav {
   right: 0;
   left: 0;
   z-index: 10;
-  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.541);
-          box-shadow: 0 0 8px rgba(255, 255, 255, 0.541);
-  background: rgba(255, 255, 255, 0.288);
+  -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.123);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.123);
+  background: rgba(255, 255, 255, 0.123);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   -webkit-transition: 0.3s;
@@ -124,7 +126,7 @@ nav .nav_links li {
 }
 
 nav .nav_links li:hover a {
-  color: #78a7ff;
+  color: #00b7ff;
 }
 
 nav .nav_links li a {
@@ -132,6 +134,7 @@ nav .nav_links li a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   letter-spacing: 0.5px;
+  font-weight: 400;
 }
 
 nav .bars {
@@ -139,7 +142,7 @@ nav .bars {
 }
 
 nav .nav_active_link {
-  color: #78a7ff !important;
+  color: #00b7ff !important;
 }
 
 .footer {
@@ -204,7 +207,7 @@ nav .nav_active_link {
   z-index: 12;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(-45deg, #78a7ff, #b762e8);
+  background: linear-gradient(-45deg, #00b7ff, #b762e8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

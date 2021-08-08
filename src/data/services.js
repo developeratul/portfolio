@@ -13,7 +13,7 @@ const services = [
   },
   {
     img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628266997/DevR-portfolio/icons/desktop_v9pqv8.svg",
-    title: "desktop Development",
+    title: "Desktop Development",
     desc: "Build cross-platform desktop apps using the modern technologies",
     animation: "fade-left",
   },

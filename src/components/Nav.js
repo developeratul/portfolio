@@ -37,7 +37,9 @@ const Nav = () => {
   return (
     <nav ref={navRef}>
       <h2 className="nav_title">
-        <Link to="/">devr()</Link>
+        <Link onClick={() => window.scrollTo(0, 0)} to="/">
+          devr()
+        </Link>
       </h2>
 
       <ul className="nav_links" ref={listNavRef}>
@@ -59,6 +61,9 @@ const Nav = () => {
         </li>
         <li>
           <a href="/#services">Services</a>
+        </li>
+        <li>
+          <a href="/#hire_or_contact">Contact</a>
         </li>
       </ul>
 

@@ -34,8 +34,8 @@ button {
 
 .stickyNav {
   background: #fff;
-  -webkit-box-shadow: 0 0 5px #5a5a5a;
-          box-shadow: 0 0 5px #5a5a5a;
+  -webkit-box-shadow: 0 0 5px #8697a879;
+          box-shadow: 0 0 5px #8697a879;
 }
 
 .stickyNav .nav_links li a {
@@ -47,7 +47,6 @@ button {
 }
 
 .home_page section {
-  scroll-margin-top: 70px;
   overflow: hidden;
 }
 
@@ -84,15 +83,16 @@ button {
 }
 
 .home_page header .header_content_wrapper .header_desc .tagline {
-  color: #78a7ff;
+  color: #00b7ff;
+  font-weight: 400;
 }
 
 .home_page header .header_content_wrapper .header_desc h1 {
   font-size: 2rem;
   font-family: Fira Code;
-  font-weight: 500;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b762e8), to(#78a7ff));
-  background: linear-gradient(to right, #b762e8 10%, #78a7ff);
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b762e8), to(#00b7ff));
+  background: linear-gradient(to right, #b762e8 10%, #00b7ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -127,14 +127,48 @@ button {
 .home_page header .header_content_wrapper .header_desc .header_buttons .single_button button {
   padding: 7px 30px;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .single_button button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  z-index: -1;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .single_button button:hover::after {
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 .home_page header .header_content_wrapper .header_desc .header_buttons .view_work_button button {
   background: #b762e8;
 }
 
+.home_page header .header_content_wrapper .header_desc .header_buttons .view_work_button button:hover {
+  color: #b762e8;
+}
+
 .home_page header .header_content_wrapper .header_desc .header_buttons .hire_me_button button {
-  background: #78a7ff;
+  background: #00b7ff;
+}
+
+.home_page header .header_content_wrapper .header_desc .header_buttons .hire_me_button button:hover {
+  color: #00b7ff;
 }
 
 .home_page header .header_content_wrapper .header_img {
@@ -143,8 +177,6 @@ button {
 
 .home_page header .header_content_wrapper .header_img img {
   width: 100%;
-  -webkit-filter: drop-shadow(0 0 2px #78a7ff);
-          filter: drop-shadow(0 0 2px #78a7ff);
 }
 
 .home_page header .header_svg {
@@ -184,8 +216,8 @@ button {
 .home_page .about_section .about_section_content_wrapper .about_img img {
   width: 100%;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 10px 10px #5a5a5a;
-          box-shadow: 5px 10px 10px #5a5a5a;
+  -webkit-box-shadow: 3px 5px 10px #2e2e2e;
+          box-shadow: 3px 5px 10px #2e2e2e;
 }
 
 .home_page .about_section .about_section_content_wrapper .about_desc {
@@ -194,23 +226,49 @@ button {
 
 .home_page .about_section .about_section_content_wrapper .about_desc h2 {
   font-size: 1.5rem;
-  font-family: Fira Code;
-  color: #b762e8;
+  color: #00b7ff;
   margin-bottom: 5px;
-  text-shadow: 0.5px 0.5px 3px #b762e8;
 }
 
 .home_page .about_section .about_section_content_wrapper .about_desc p {
   text-align: justify;
-  text-justify: inter-character;
+  text-justify: revert;
   margin-bottom: 10px;
   color: #5a5a5a;
 }
 
 .home_page .about_section .about_section_content_wrapper .about_desc .about_section_button a button {
-  background: linear-gradient(45deg, #b762e8, #78a7ff);
+  background: linear-gradient(45deg, #b762e8, #00b7ff);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   padding: 7px 20px;
   color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc .about_section_button a button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  z-index: -1;
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc .about_section_button a button:hover::after {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.home_page .about_section .about_section_content_wrapper .about_desc .about_section_button a button::after {
+  background: #00b7ff;
 }
 
 .home_page .portfolio_section {
@@ -299,7 +357,7 @@ button {
 
 .home_page .portfolio_section .portfolio_card_container .single_card .card_desc .card_buttons .single_button button {
   padding: 0 30px;
-  background: #78a7ff;
+  background: #00b7ff;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,6 +438,56 @@ button {
   color: #b762e8;
 }
 
+.home_page .contact_section {
+  padding: 50px 0;
+}
+
+.home_page .contact_section .contact_section_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_form {
+  width: 500px;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_form .form_title {
+  font-size: 1.5rem;
+  color: #00b7ff;
+  margin-bottom: 10px;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_form form .single_field {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_form form .single_field textarea {
+  resize: none;
+  height: 200px;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_form form .single_field button {
+  width: 100%;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_right_image {
+  width: 450px;
+}
+
+.home_page .contact_section .contact_section_content_wrapper .contact_right_image img {
+  width: 100%;
+}
+
 @media screen and (max-width: 1024px) {
   .home_page header .header_content_wrapper .header_desc {
     width: 300px;
@@ -413,6 +521,15 @@ button {
   }
   .home_page .services_section .services_wrapper .single_service {
     margin: 10px;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_form {
+    width: 350px;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_form form .single_field textarea {
+    height: 100px;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_right_image {
+    width: 300px;
   }
 }
 
@@ -477,8 +594,8 @@ button {
   }
   .home_page .portfolio_section .portfolio_card_container .single_card {
     width: 100%;
+    max-width: 400px;
     margin: 10px 0;
-    max-width: 340px;
   }
   .home_page .services_section .services_wrapper {
     -webkit-box-orient: vertical;
@@ -495,6 +612,30 @@ button {
   .home_page .services_section .services_wrapper .single_service {
     margin: 10px 0;
     max-width: 100%;
+  }
+  .home_page .contact_section .contact_section_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_form {
+    width: 100%;
+    max-width: 400px;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_form form .single_field textarea {
+    height: 100px;
+  }
+  .home_page .contact_section .contact_section_content_wrapper .contact_right_image {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
   }
 }
 /*# sourceMappingURL=home.css.map */
