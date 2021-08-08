@@ -17,6 +17,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [pending, setPending] = useState(false);
   const toast = useToast();
 
   function HandleInputChange(event) {
@@ -26,13 +27,15 @@ const Contact = () => {
 
   async function HandleSubmit(e) {
     e.preventDefault();
+    setPending(true);
     const { name, email, subject, message: theMessage } = message;
 
     try {
       if (!name || !email || !subject || !theMessage) {
+        setPending(false);
         toast({
           title: "Please fill all the fields properly",
-          status: "warning",
+          status: "error",
         });
       } else {
         await emailJs.sendForm(
@@ -44,6 +47,7 @@ const Contact = () => {
 
         setMessage({ name: "", email: "", subject: "", message: "" });
         toast({ title: "Your message was sent", status: "success" });
+        setPending(false);
       }
     } catch (err) {
       toast({ title: err.message, status: "error" });
@@ -113,7 +117,12 @@ const Contact = () => {
               </div>
 
               <div className="single_field">
-                <Button type="submit" variant="solid" colorScheme="teal">
+                <Button
+                  disabled={pending}
+                  type="submit"
+                  variant="solid"
+                  colorScheme="teal"
+                >
                   Send Message
                 </Button>
               </div>
