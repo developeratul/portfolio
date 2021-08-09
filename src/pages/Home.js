@@ -32,6 +32,26 @@ const Home = () => {
         <meta property="og:url" content="http://devr.netlify.app/" />
         <meta property="og:image" content={assets.logo} />
         <meta property="og:site_name" content="DevR" />
+
+        <meta property="twitter:title" content="DevR | Home" />
+        <meta
+          property="twitter:description"
+          content="The home page of devR's official portfolio site"
+        />
+        <meta property="twitter:type" content="website" />
+        <meta property="twitter:url" content="http://devr.netlify.app/" />
+        <meta property="twitter:image" content={assets.logo} />
+        <meta property="twitter:site_name" content="DevR" />
+
+        <meta property="facebook:title" content="DevR | Home" />
+        <meta
+          property="facebook:description"
+          content="The home page of devR's official portfolio site"
+        />
+        <meta property="facebook:type" content="website" />
+        <meta property="facebook:url" content="http://devr.netlify.app/" />
+        <meta property="facebook:image" content={assets.logo} />
+        <meta property="facebook:site_name" content="DevR" />
       </Helmet>
       <Header />
       <About />
