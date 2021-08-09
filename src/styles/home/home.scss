@@ -247,6 +247,48 @@
     }
   }
 
+  // * the work process section
+  .work_process {
+    padding: 100px 0px;
+    background: #3a2c60;
+    position: relative;
+    .title {
+      font-family: Fira Code;
+      text-align: center;
+      color: $themeColor;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    .work_process_content_wrapper {
+      @include flexBetween();
+      .single_process {
+        width: 320px;
+        background: $themeColor;
+        color: #fff;
+        padding: 30px 10px;
+        height: 300px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 0 5px $themeColor;
+        .icon {
+          font-size: 4rem;
+          color: #3a2c60;
+          display: grid;
+          align-items: flex-start;
+        }
+        .desc {
+          text-align: center;
+          h2 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 5px #fff;
+          }
+        }
+      }
+    }
+  }
+
   // * the contact section
   .contact_section {
     padding: 50px 0;
@@ -347,6 +389,15 @@
         }
       }
     }
+
+    .work_process {
+      .work_process_content_wrapper {
+        justify-content: center;
+        .single_process {
+          margin: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -414,6 +465,17 @@
         .single_service {
           margin: 10px 0;
           max-width: 100%;
+        }
+      }
+    }
+
+    .work_process {
+      .work_process_content_wrapper {
+        justify-content: center;
+        .single_process {
+          margin: 10px 0;
+          width: 100%;
+          max-width: 320px;
         }
       }
     }

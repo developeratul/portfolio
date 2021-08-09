@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 
 // pages
 import Home from "./pages/Home";
-
 const App = () => {
   const loaderRef = useRef();
 

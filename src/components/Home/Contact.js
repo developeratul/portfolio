@@ -18,7 +18,9 @@ const Contact = () => {
     message: "",
   });
   const [pending, setPending] = useState(false);
-  const toast = useToast();
+  const toast = useToast({ position: "top" });
+
+  console.log(process.env.REACT_APP_SERVICE_ID);
 
   function HandleInputChange(event) {
     const { name, value } = event.target;
@@ -39,10 +41,10 @@ const Contact = () => {
         });
       } else {
         await emailJs.sendForm(
-          "service_uts1etd",
-          "template_ny7lv63",
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
           e.target,
-          "user_zGeUyLyIuKUUZcFkwbMZy"
+          process.env.REACT_APP_USER_ID
         );
 
         setMessage({ name: "", email: "", subject: "", message: "" });

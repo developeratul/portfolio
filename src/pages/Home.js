@@ -7,6 +7,7 @@ import About from "../components/Home/About";
 import Portfolio from "../components/Home/Portfolio";
 import Services from "../components/Home/Services";
 import Contact from "../components/Home/Contact";
+import WorkProcess from "../components/Home/WorkProcess";
 
 const Home = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home = () => {
       <About />
       <Portfolio />
       <Services />
+      <WorkProcess />
       <Contact />
     </div>
   );

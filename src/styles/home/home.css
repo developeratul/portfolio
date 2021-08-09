@@ -438,6 +438,68 @@ button {
   color: #b762e8;
 }
 
+.home_page .work_process {
+  padding: 100px 0px;
+  background: #3a2c60;
+  position: relative;
+}
+
+.home_page .work_process .title {
+  font-family: Fira Code;
+  text-align: center;
+  color: #b762e8;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.home_page .work_process .work_process_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home_page .work_process .work_process_content_wrapper .single_process {
+  width: 320px;
+  background: #b762e8;
+  color: #fff;
+  padding: 30px 10px;
+  height: 300px;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-shadow: 0 0 5px #b762e8;
+          box-shadow: 0 0 5px #b762e8;
+}
+
+.home_page .work_process .work_process_content_wrapper .single_process .icon {
+  font-size: 4rem;
+  color: #3a2c60;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.home_page .work_process .work_process_content_wrapper .single_process .desc {
+  text-align: center;
+}
+
+.home_page .work_process .work_process_content_wrapper .single_process .desc h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #fff;
+}
+
 .home_page .contact_section {
   padding: 50px 0;
 }
@@ -531,6 +593,14 @@ button {
   .home_page .contact_section .contact_section_content_wrapper .contact_right_image {
     width: 300px;
   }
+  .home_page .work_process .work_process_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home_page .work_process .work_process_content_wrapper .single_process {
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -612,6 +682,16 @@ button {
   .home_page .services_section .services_wrapper .single_service {
     margin: 10px 0;
     max-width: 100%;
+  }
+  .home_page .work_process .work_process_content_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home_page .work_process .work_process_content_wrapper .single_process {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 320px;
   }
   .home_page .contact_section .contact_section_content_wrapper {
     -webkit-box-pack: center;
