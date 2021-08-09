@@ -16,7 +16,12 @@ const Services = () => {
                 data-aos={service.animation}
               >
                 <div className="service_img">
-                  <img src={service.img} alt={service.desc} />
+                  <img
+                    width="200px"
+                    height="200px"
+                    src={service.img}
+                    alt={service.desc}
+                  />
                 </div>
                 <div className="service_desc">
                   <h2>{service.title}</h2>

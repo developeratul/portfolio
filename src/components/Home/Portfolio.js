@@ -32,8 +32,9 @@ const Portfolio = () => {
                         href={item.repo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="github repo link"
                       >
-                        <Button variant="solid">
+                        <Button aria-label="github repo link" variant="solid">
                           <span>
                             <GithubOutlined />
                           </span>
@@ -46,8 +47,9 @@ const Portfolio = () => {
                         href={item.demo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="demo link"
                       >
-                        <Button variant="solid">
+                        <Button aria-label="demo liked button" variant="solid">
                           <span>
                             <LoginOutlined />
                           </span>

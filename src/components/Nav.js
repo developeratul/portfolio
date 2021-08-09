@@ -45,6 +45,7 @@ const Nav = () => {
       <ul className="nav_links" ref={listNavRef}>
         <li>
           <NavLink
+            aria-label="home page link"
             onClick={() => window.scrollTo(0, 0)}
             exact
             activeClassName="nav_active_link"
@@ -54,16 +55,24 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <a href="/#about">About</a>
+          <a href="/#about" aria-label="about section link">
+            About
+          </a>
         </li>
         <li>
-          <a href="/#portfolio">Portfolio</a>
+          <a href="/#portfolio" aria-label="portfolio section link">
+            Portfolio
+          </a>
         </li>
         <li>
-          <a href="/#services">Services</a>
+          <a aria-label="services section link" href="/#services">
+            Services
+          </a>
         </li>
         <li>
-          <a href="/#hire_or_contact">Contact</a>
+          <a href="/#hire_or_contact" aria-label="contact section link">
+            Contact
+          </a>
         </li>
       </ul>
 

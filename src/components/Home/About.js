@@ -16,7 +16,12 @@ const About = () => {
             data-aos="fade-right"
             data-aos-duration="4000"
           >
-            <img src={logo} alt="DevR official logo" />
+            <img
+              width="500px"
+              height="500px"
+              src={logo}
+              alt="DevR official logo"
+            />
           </div>
 
           <div
@@ -39,8 +44,15 @@ const About = () => {
               passionate about what I do.
             </p>
             <div className="about_section_button">
-              <a href={github} target="_blank" rel="noopener noreferrer">
-                <Button variant="solid">Visit My Github</Button>
+              <a
+                aria-label="devR github profile link"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button aria-label="DevR github account link" variant="solid">
+                  Visit My Github
+                </Button>
               </a>
             </div>
           </div>

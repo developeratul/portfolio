@@ -1,5 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+@font-face {
+  font-family: Roboto Mono;
+  src: url(../../fonts/RobotoMono.woff);
+}
+
+@font-face {
+  font-family: Fira Code;
+  src: url(../../fonts/FiraCode.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,7 +92,7 @@ button {
 
 .home_page header .header_content_wrapper .header_desc .tagline {
   color: #00b7ff;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .home_page header .header_content_wrapper .header_desc h1 {

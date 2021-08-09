@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You're offline. Please go online" />
+    <meta name="keywords" content="Offline page, No internet connection" />
+    <title>DevR - You're offline</title>
+  </head>
+  <body>
+    <div class="offline_section">
+      <div class="offline_content_container">
+        <h2>You're Offline</h2>
+        <p>
+          Looks like you are not connected to the internet. Make sure you are
+          connected to the internet and try again
+        </p>
+        <button aria-label="reload-button" class="reload_button">
+          Try Again
+        </button>
+      </div>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      .offline_section {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(45deg, rgb(0, 225, 255), rgb(255, 0, 170));
+      }
+      .offline_content_container {
+        width: 90%;
+        max-width: 350px;
+        padding: 50px 10px;
+        margin: auto;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.315);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.39);
+        text-align: center;
+        color: #fff;
+      }
+      .offline_content_container h2 {
+        margin-bottom: 10px;
+      }
+      .offline_content_container p {
+        margin-bottom: 20px;
+      }
+      .offline_content_container button {
+        padding: 7px 20px;
+        background: #eb12b1;
+        color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 5px #eb12b1;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      const button = document.querySelector(".reload_button");
+      button.addEventListener("click", () => {
+        this.location.reload();
+      });
+    </script>
+  </body>
+</html>

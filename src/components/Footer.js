@@ -22,29 +22,65 @@ const Footer = () => {
 
           <ul className="footer_links">
             <li>
-              <a href={facebook} target="_blank" rel="noopener noreferrer">
-                <IconButton variant="solid" colorScheme="facebook">
+              <a
+                href={facebook}
+                arial-label="devR facebook account link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  arial-label="devR facebook account link"
+                  variant="solid"
+                  colorScheme="facebook"
+                >
                   <FacebookFilled />
                 </IconButton>
               </a>
             </li>
             <li>
-              <a href={github} target="_blank" rel="noopener noreferrer">
-                <IconButton variant="solid" colorScheme="blackAlpha">
+              <a
+                arial-label="devR github account link"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  variant="solid"
+                  arial-label="devR github account link"
+                  colorScheme="blackAlpha"
+                >
                   <GithubFilled />
                 </IconButton>
               </a>
             </li>
             <li>
-              <a href={twitter} target="_blank" rel="noopener noreferrer">
-                <IconButton variant="solid" colorScheme="twitter">
+              <a
+                href={twitter}
+                arial-label="devR twitter account link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  arial-label="devR twitter account link"
+                  variant="solid"
+                  colorScheme="twitter"
+                >
                   <TwitterCircleFilled />
                 </IconButton>
               </a>
             </li>
             <li>
-              <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                <IconButton variant="solid" colorScheme="linkedin">
+              <a
+                arial-label="devR linkedin account link"
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton
+                  arial-label="devR linkedin account link"
+                  variant="solid"
+                  colorScheme="linkedin"
+                >
                   <LinkedinFilled />
                 </IconButton>
               </a>

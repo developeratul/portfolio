@@ -1,5 +1,7 @@
 import "../styles/home/home.css";
 import { useEffect } from "react";
+import Helmet from "react-helmet";
+import assets from "../data/assets";
 
 // components
 import Header from "../components/Home/Header";
@@ -11,12 +13,26 @@ import WorkProcess from "../components/Home/WorkProcess";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "DevR | Home";
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="home_page">
+      <Helmet>
+        <title>DevR | Home</title>
+        <meta name="description" content="The page of DevR Portfolio" />
+        <meta name="keywords" content="DevR Home, DevR, Developer Ratul" />
+
+        <meta property="og:title" content="DevR | Home" />
+        <meta
+          property="og:description"
+          content="The home page of devR's official portfolio site"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://devr.netlify.app/" />
+        <meta property="og:image" content={assets.logo} />
+        <meta property="og:site_name" content="DevR" />
+      </Helmet>
       <Header />
       <About />
       <Portfolio />

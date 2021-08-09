@@ -20,8 +20,6 @@ const Contact = () => {
   const [pending, setPending] = useState(false);
   const toast = useToast({ position: "top" });
 
-  console.log(process.env.REACT_APP_SERVICE_ID);
-
   function HandleInputChange(event) {
     const { name, value } = event.target;
     setMessage((pre) => ({ ...pre, [name]: value }));
@@ -120,6 +118,7 @@ const Contact = () => {
 
               <div className="single_field">
                 <Button
+                  aria-label="send-message-button"
                   disabled={pending}
                   type="submit"
                   variant="solid"
@@ -133,6 +132,8 @@ const Contact = () => {
 
           <div className="contact_right_image" data-aos="fade-left">
             <img
+              width="100%"
+              height="auto"
               src="https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628405715/DevR-portfolio/illustrations/contact_rfh6vc.svg"
               alt="Contact form illustration"
             />

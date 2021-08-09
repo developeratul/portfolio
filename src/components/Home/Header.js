@@ -19,8 +19,10 @@ const Header = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <a href="#portfolio">
-                  <Button variant="solid">Works</Button>
+                <a aria-label="portfolio section link" href="#portfolio">
+                  <Button aria-label="view works button" variant="solid">
+                    Works
+                  </Button>
                 </a>
               </div>
 
@@ -29,8 +31,10 @@ const Header = () => {
                 data-aos-delay="500"
                 className="single_button hire_me_button"
               >
-                <a href="#hire_or_contact">
-                  <Button variant="solid">Hire Me</Button>
+                <a aria-label="contact me section link" href="#hire_or_contact">
+                  <Button aria-label="hire me button" variant="solid">
+                    Hire Me
+                  </Button>
                 </a>
               </div>
             </div>
@@ -38,6 +42,8 @@ const Header = () => {
 
           <div className="header_img" data-aos="fade-left">
             <img
+              width="500px"
+              height="500px"
               src="https://res.cloudinary.com/devr-static-assets-db/image/upload/v1627880266/DevR-portfolio/illustrations/Header_image_qvufhd.png"
               alt="Header intro illustration"
             />
@@ -46,7 +52,7 @@ const Header = () => {
       </div>
 
       <div className="header_svg">
-        <img src={HeaderSvg} alt="Header svg" />
+        <img width="100%" height="auto" src={HeaderSvg} alt="Header svg" />
       </div>
     </header>
   );
