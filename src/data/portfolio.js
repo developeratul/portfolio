@@ -35,15 +35,6 @@ const portfolioData = [
     demo: "https://devr-free-portfolio-template.netlify.app/",
     animation: "fade-right",
   },
-  {
-    id: 5,
-    title: "Chat App",
-    desc: "A realtime chatting application with React and firebase",
-    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628070987/DevR-portfolio/projects/chat_app_e2ibui.png",
-    repo: "https://github.com/ratul-devR/realtime-chat-app",
-    demo: "https://devr-realtime-chat-app.web.app/",
-    animation: "fade-left",
-  },
 ];
 
 export default portfolioData;
