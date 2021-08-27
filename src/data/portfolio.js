@@ -35,6 +35,24 @@ const portfolioData = [
     demo: "https://devr-free-portfolio-template.netlify.app/",
     animation: "fade-right",
   },
+  {
+    id: 5,
+    title: "Todo App",
+    desc: "A todo app using Next and Typescript",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1630042486/DevR-portfolio/projects/todo-app_jp1d3u.png",
+    repo: "https://github.com/ratul-devR/Todo-App",
+    demo: "http://todo-app-ratul-devr.vercel.app/",
+    animation: "fade-up",
+  },
+  {
+    id: 6,
+    title: "Calculator",
+    desc: "A calculator using Next and Typescript",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1630042438/DevR-portfolio/projects/calculator_etsd51.png",
+    repo: "https://github.com/ratul-devR/Calculator-App",
+    demo: "http://calculator-app-omega.vercel.app/",
+    animation: "fade-left",
+  },
 ];
 
 export default portfolioData;
