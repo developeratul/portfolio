@@ -10,11 +10,11 @@ const portfolioData = [
   },
   {
     id: 2,
-    title: "Covid-19 Tracker",
-    desc: "A visual covid-19 explorer. Using React and Chart.js",
-    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628070439/DevR-portfolio/projects/covid-19-tracker_yget46.png",
-    repo: "https://github.com/ratul-devR/Covid-19-tracker",
-    demo: "https://devr-covid-19-tracker.netlify.app/",
+    title: "Meme Site",
+    desc: "A meme sharing platform created using the MERN stack with TS",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1631618230/DevR-portfolio/projects/Web_capture_14-9-2021_171142_devr-memes.herokuapp.com_kewozc.jpg",
+    repo: "https://github.com/ratul-devR/meme-website",
+    demo: "https://devr-memes.herokuapp.com/",
     animation: "fade-up",
   },
   {
