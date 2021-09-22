@@ -3,7 +3,6 @@ import links from "../../data/links";
 import assets from "../../data/assets";
 
 const About = () => {
-  const experience = new Date().getFullYear() - 2019;
   const { github } = links;
   const { logo } = assets;
 
@@ -32,16 +31,15 @@ const About = () => {
             <h2>Few words about me</h2>
             <p>
               Hi there. I am Ratul. I am a full-stack developer from Bangladesh.
-              I build progressive applications using JavaScript. I have almost{" "}
-              {experience} years of experience as a full-stack developer. I have
-              worked on large scale applications which you can browse from my
-              github or you can also scroll down to browse some of them. Most of
-              my projects are created using the MERN stack. This is my favorite
-              tech stack and I feel so comfortable with it. I have a nice
-              experience in building good looking front-ends. I am also very
-              good at back-end and Database management. I use non-relational
-              databases. But I am interested in relational databases also. I am
-              passionate about what I do.
+              I build progressive applications using JavaScript. I use
+              technologies like React, Next Js, Node, Express and MongoDB. I can
+              build modern UIs and effective and scalable api's. I can also
+              build Mobile apps with React-Native. I write readable code's which
+              are also well refactored. I can learn any new skill faster and get
+              started with it. I have experience in using project management
+              tools like Github, Jira, Notion etc. I have the confidence to
+              build any type of application using this stack. I am open to
+              freelance and remote invoices.
             </p>
             <div className="about_section_button">
               <a
