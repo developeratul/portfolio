@@ -1,12 +1,11 @@
-import SectionTitle from "../SectionTitle";
 import services from "../../data/services";
+import SectionTitle from "../SectionTitle";
 
 const Services = () => {
   return (
     <section className="services_section" id="services">
       <div className="container">
-        <SectionTitle title="Services" desc="Some of my Services I provide" />
-
+        <SectionTitle title="Services" desc="Service I specialize" />
         <div className="services_wrapper">
           {services.map((service, index) => {
             return (

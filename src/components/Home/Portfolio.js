@@ -1,13 +1,13 @@
-import SectionTitle from "../SectionTitle";
-import portfolioData from "../../data/portfolio";
-import { Button } from "@chakra-ui/react";
 import { GithubOutlined, LoginOutlined } from "@ant-design/icons";
+import { Button } from "@chakra-ui/react";
+import portfolioData from "../../data/portfolio";
+import SectionTitle from "../SectionTitle";
 
 const Portfolio = () => {
   return (
     <section className="portfolio_section" id="portfolio">
       <div className="container">
-        <SectionTitle title="Portfolio" desc="Works I have done" />
+        <SectionTitle title="Portfolio" desc="Some of my good creations" />
 
         <div className="portfolio_card_container">
           {portfolioData.map((item) => {

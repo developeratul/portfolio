@@ -1,20 +1,20 @@
 const services = [
   {
     img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628266997/DevR-portfolio/icons/website_v5gpph.svg",
-    title: "Web Development",
-    desc: "Build progressive and high performing web apps using the modern technologies",
+    title: "Front-end Development",
+    desc: "Building high performing and modern designed frontend",
     animation: "fade-right",
   },
   {
-    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628266997/DevR-portfolio/icons/mobile_develop_upse9y.svg",
-    title: "Mobile Development",
-    desc: "Build cross-platform mobile apps using the modern technologies",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1661431619/DevR-portfolio/icons/web-settings_p3guyq.png",
+    title: "Back-end Development",
+    desc: "Building type safe API's and Services",
     animation: "fade-up",
   },
   {
-    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628266997/DevR-portfolio/icons/desktop_v9pqv8.svg",
-    title: "Desktop Development",
-    desc: "Build cross-platform desktop apps using the modern technologies",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1661431733/DevR-portfolio/icons/programmer_c3mfby.png",
+    title: "Full-Stack Development",
+    desc: "Building a bulletproof web app with both frontend and backend",
     animation: "fade-left",
   },
 ];

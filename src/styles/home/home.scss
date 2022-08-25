@@ -22,8 +22,7 @@
       .header_desc {
         width: 400px;
         .tagline {
-          color: $themeSecondaryColor;
-          font-weight: 400;
+          color: #0099ff;
         }
         h1 {
           font-size: 2rem;
@@ -102,6 +101,7 @@
     padding: 50px 0;
     .about_section_content_wrapper {
       @include flexBetween();
+      align-items: flex-start;
       .about_img {
         width: 400px;
         img {
@@ -124,8 +124,13 @@
           margin-bottom: 10px;
           color: $gray;
         }
+        a {
+          color: $themeColor;
+          text-decoration: underline;
+        }
         .about_section_button {
           a {
+            text-decoration: none;
             button {
               background: linear-gradient(
                 45deg,
@@ -219,7 +224,7 @@
         width: 320px;
         box-shadow: 3px 3px 10px 3px $shadowColor;
         border-radius: 5px;
-        padding: 30px 10px;
+        padding: 40px 20px;
         display: grid;
         align-items: center;
         transition: 0.3s;

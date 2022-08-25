@@ -10,6 +10,15 @@ const portfolioData = [
   },
   {
     id: 2,
+    title: "DevR Commerce",
+    desc: "An E-Commerce store created with Next.js",
+    img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1661431179/DevR-portfolio/projects/Web_capture_25-8-2022_183922_devr-commerce.vercel.app_wlataa.jpg",
+    repo: "https://github.com/ratul-devr/devr-commerce",
+    demo: "https://devr-commerce.vercel.app/",
+    animation: "fade-up",
+  },
+  {
+    id: 3,
     title: "Landing Page",
     desc: "A responsive portfolio template with React and Sass",
     img: "https://res.cloudinary.com/devr-static-assets-db/image/upload/v1628070754/DevR-portfolio/projects/portfolio_landing_page_krldgd.png",

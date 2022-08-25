@@ -10,8 +10,8 @@ const Header = () => {
             <p className="tagline">Full-Stack Developer</p>
             <h1>Developer Ratul</h1>
             <p className="bio">
-              Hey there I am Ratul. I build stuffs with JavaScript. I am a
-              full-stack developer. Open for remote and freelance works.
+              16 years old full-stack developer building production level
+              applications on the web.
             </p>
             <div className="header_buttons">
               <div
@@ -21,7 +21,7 @@ const Header = () => {
               >
                 <a aria-label="portfolio section link" href="#portfolio">
                   <Button aria-label="view works button" variant="solid">
-                    Works
+                    Portfolio
                   </Button>
                 </a>
               </div>

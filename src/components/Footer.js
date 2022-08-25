@@ -1,15 +1,10 @@
+import { GithubFilled, TwitterCircleFilled } from "@ant-design/icons";
+import { IconButton } from "@chakra-ui/react";
 import assets from "../data/assets";
 import links from "../data/links";
-import { IconButton } from "@chakra-ui/react";
-import {
-  FacebookFilled,
-  GithubFilled,
-  LinkedinFilled,
-  TwitterCircleFilled,
-} from "@ant-design/icons";
 
 const Footer = () => {
-  const { facebook, twitter, linkedin, github } = links;
+  const { twitter, github } = links;
   const { roundedLogo } = assets;
 
   return (
@@ -21,22 +16,6 @@ const Footer = () => {
           </div>
 
           <ul className="footer_links">
-            <li>
-              <a
-                href={facebook}
-                arial-label="devR facebook account link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IconButton
-                  arial-label="devR facebook account link"
-                  variant="solid"
-                  colorScheme="facebook"
-                >
-                  <FacebookFilled />
-                </IconButton>
-              </a>
-            </li>
             <li>
               <a
                 arial-label="devR github account link"
@@ -69,24 +48,7 @@ const Footer = () => {
                 </IconButton>
               </a>
             </li>
-            <li>
-              <a
-                arial-label="devR linkedin account link"
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IconButton
-                  arial-label="devR linkedin account link"
-                  variant="solid"
-                  colorScheme="linkedin"
-                >
-                  <LinkedinFilled />
-                </IconButton>
-              </a>
-            </li>
           </ul>
-
           <div className="copyright">
             Created with <span>❤</span> by DevR
           </div>
