@@ -1,6 +1,6 @@
 const links = {
-  github: "https://github.com/ratul-devr",
-  twitter: "https://twitter.com/Ratul_devR",
+  github: "https://github.com/developeratul",
+  twitter: "https://twitter.com/developeratul",
 };
 
 export default links;
