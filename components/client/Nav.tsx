@@ -9,10 +9,14 @@ import { Container } from "../Layout";
 export function Nav() {
   const navRef = React.useRef<HTMLElement | null>(null);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       const nav = navRef.current;
       nav?.classList.toggle("scrolled_nav", window.scrollY > 0);
-    });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <nav
@@ -31,6 +35,7 @@ export function Nav() {
             <NavLink href="/about">About</NavLink>
             <NavLink href="/portfolio">Portfolio</NavLink>
             <Button>Hire me</Button>
+            <Button color="secondary">Hire me</Button>
           </menu>
         </div>
       </Container>
