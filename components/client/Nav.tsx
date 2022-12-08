@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 
-import { Link, NavLink } from "@/components";
+import { Button, Link, NavLink } from "@/components";
 
 import { Container } from "../Layout";
 
@@ -30,6 +30,7 @@ export function Nav() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/portfolio">Portfolio</NavLink>
+            <Button>Hire me</Button>
           </menu>
         </div>
       </Container>

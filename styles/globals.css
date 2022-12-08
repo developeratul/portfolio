@@ -5,3 +5,17 @@
 .scrolled_nav {
   @apply !bg-background-600 py-5 shadow-md;
 }
+
+@layer base {
+  *:focus {
+    outline: none;
+    @apply ring;
+  }
+  a,
+  button,
+  h1,
+  h2,
+  h3 {
+    user-select: none;
+  }
+}
