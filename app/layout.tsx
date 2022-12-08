@@ -1,7 +1,7 @@
 import { JetBrains_Mono } from "@next/font/google";
 import clsx from "clsx";
 
-import { Nav } from "@/components/client/Nav";
+import { Nav } from "@/components/common/Nav";
 import type { AppProps } from "@/types";
 
 import "../styles/globals.css";
