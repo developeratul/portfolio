@@ -1,3 +1,3 @@
 export type AppProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };

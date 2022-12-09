@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .scrolled_nav {
-  @apply !bg-background-600 py-5 shadow-md;
+  @apply !bg-white py-5 shadow-md dark:!bg-background-600;
 }
 
 @layer base {
-  *:focus {
+  *:focus-visible {
     outline: none;
     @apply ring;
   }

@@ -17,18 +17,13 @@ const sizes = {
   lg: "py-3 px-8 text-lg",
 };
 
-type IconProps =
-  | { startIcon: React.ReactElement; endIcon?: never }
-  | { endIcon: React.ReactElement; startIcon?: never }
-  | { endIcon?: undefined; startIcon?: undefined };
+type IconProps = { startIcon?: React.ReactElement; endIcon?: React.ReactElement };
 
-type ButtonProps = {
+export interface ButtonProps extends IconProps, AppProps, React.HTMLAttributes<HTMLButtonElement> {
   color?: keyof typeof colors;
   size?: keyof typeof sizes;
   isLoading?: boolean;
-} & AppProps &
-  React.HTMLAttributes<HTMLButtonElement> &
-  IconProps;
+}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -58,7 +53,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading && <Spinner size="sm" className="text-current" />}
         {!isLoading && startIcon}
-        <span className="mx-2">{children}</span> {!isLoading && endIcon}
+        <span className="mx-2">{children}</span>
+        {!isLoading && endIcon}
       </button>
     );
   }
