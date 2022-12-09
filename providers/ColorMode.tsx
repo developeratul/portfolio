@@ -1,4 +1,5 @@
 "use client";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
 import type { AppProps } from "@/types";
@@ -16,6 +17,7 @@ export const ColorModeContext = React.createContext<{
 export function ColorMode(props: AppProps) {
   const { children } = props;
   const [mode, setMode] = React.useState<ColorModes>("dark");
+  const [mounted, setMounted] = React.useState(false);
 
   const toggleColorMode = (currentMode?: ColorModes) => {
     if (currentMode) {
@@ -35,10 +37,12 @@ export function ColorMode(props: AppProps) {
   const values = React.useMemo(() => ({ toggleColorMode, mode }), [mode]);
 
   React.useEffect(() => {
+    setMounted(true);
     const currentMode = storage.get(STORAGE_KEY);
-    console.log(currentMode);
     toggleColorMode(currentMode ?? "dark");
   }, []);
+
+  if (!mounted) return null;
 
   return <ColorModeContext.Provider value={values}>{children}</ColorModeContext.Provider>;
 }
@@ -47,5 +51,9 @@ export const useColorModeContext = () => React.useContext(ColorModeContext);
 
 export const ColorModeToggler = () => {
   const { mode, toggleColorMode } = useColorModeContext();
-  return <button onClick={() => toggleColorMode()}>{mode === "light" ? "Dark" : "Light"}</button>;
+  return (
+    <button onClick={() => toggleColorMode()}>
+      {mode === "light" ? <SunIcon width={20} height={20} /> : <MoonIcon width={20} height={20} />}
+    </button>
+  );
 };

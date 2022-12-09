@@ -24,7 +24,7 @@ export function Nav() {
       ref={navRef}
       className="sticky top-0 left-0 bg-background-50 py-3 duration-300 dark:bg-background-500"
     >
-      <Container>
+      <Container size="lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <h6 className="text-lg font-light text-primary-600 dark:text-primary-500">
@@ -36,10 +36,7 @@ export function Nav() {
           </div>
           <menu className="flex items-center justify-between gap-5">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
             <Button>Hire me</Button>
-            <Button color="secondary">Hire me</Button>
           </menu>
         </div>
       </Container>

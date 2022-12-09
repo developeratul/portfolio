@@ -6,9 +6,9 @@ import type { AppProps } from "@/types";
 
 const colors = {
   primary:
-    "bg-primary-500 text-gray-900 hover:bg-primary-400 active:bg-primary-500 ring-primary-500/40",
+    "bg-primary-600 dark:bg-primary-500 text-gray-50 dark:text-gray-900 hover:bg-primary-500 dark:hover:bg-primary-400 active:bg-primary-600 dark:active:bg-primary-500 ring-primary-500/40",
   secondary:
-    "bg-secondary-500 text-gray-900 hover:bg-secondary-400 active:bg-secondary-500  ring-secondary-500/40",
+    "bg-secondary-600 dark:bg-secondary-500 text-gray-50 dark:text-gray-900 hover:bg-secondary-500 dark:hover:bg-secondary-400 active:bg-secondary-600 dark:active:bg-secondary-500 ring-secondary-500/40",
 };
 
 const sizes = {
