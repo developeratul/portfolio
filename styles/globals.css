@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.scrolled_nav {
-  @apply !bg-white py-5 shadow-md dark:!bg-background-600;
-}
-
 @layer base {
   *:focus-visible {
     outline: none;
@@ -18,4 +14,8 @@
   h3 {
     user-select: none;
   }
+}
+
+.scrolled_nav {
+  @apply !bg-white py-5 shadow-md dark:!bg-background-600;
 }

@@ -34,10 +34,18 @@ export function Nav() {
             </h6>
             <ColorModeToggler />
           </div>
-          <menu className="flex items-center justify-between gap-5">
+          <div className="absolute top-0 right-0 flex h-screen w-full max-w-md translate-x-full transform flex-col items-start justify-center gap-5 bg-white/70 p-5 backdrop-blur-lg dark:bg-background-600/70 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:justify-between lg:!bg-transparent lg:!p-0 lg:backdrop-blur-none">
             <NavLink href="/">Home</NavLink>
-            <Button>Hire me</Button>
-          </menu>
+            <NavLink href="/">About</NavLink>
+            <NavLink href="/">Portfolio</NavLink>
+            <NavLink href="/">Skills</NavLink>
+            <NavLink href="/">Services</NavLink>
+            <NavLink href="/">Contact</NavLink>
+            <Button className="w-full lg:w-auto">Hire me</Button>
+          </div>
+          <div className="z-10 lg:hidden">
+            <button>bars</button>
+          </div>
         </div>
       </Container>
     </nav>

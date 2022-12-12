@@ -16,7 +16,7 @@ export default async function RootLayout(props: AppProps) {
   const { children } = props;
   return (
     <html className={clsx(jetbrainsMono.variable)} lang="en">
-      <body className="bg-background-50 font-mono font-normal text-gray-900 dark:bg-background-500 dark:text-gray-50">
+      <body className="h-screen w-screen !overflow-x-hidden bg-background-50 font-mono font-normal text-gray-900 dark:bg-background-500 dark:text-gray-50">
         <ColorMode>
           <main>
             <Nav />

@@ -52,7 +52,7 @@ export const useColorModeContext = () => React.useContext(ColorModeContext);
 export const ColorModeToggler = () => {
   const { mode, toggleColorMode } = useColorModeContext();
   return (
-    <button onClick={() => toggleColorMode()}>
+    <button aria-label="color-theme-toggler" onClick={() => toggleColorMode()}>
       {mode === "light" ? <SunIcon width={20} height={20} /> : <MoonIcon width={20} height={20} />}
     </button>
   );

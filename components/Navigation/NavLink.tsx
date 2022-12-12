@@ -13,7 +13,7 @@ export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
         href={href}
         ref={ref}
         className={clsx(
-          "relative p-3 text-gray-600 after:absolute after:bottom-0 after:left-0 after:content-[''] hover:no-underline dark:text-gray-400",
+          "relative inline-block w-full px-5 py-3 text-gray-600 after:absolute after:bottom-0 after:left-0 after:content-[''] hover:no-underline dark:text-gray-400 md:w-auto md:!p-3",
           "overflow-hidden after:h-[2px] after:w-full after:-translate-x-[110%] after:transform after:rounded-md after:bg-primary-500",
           "duration-300 after:duration-300 hover:text-black hover:after:translate-x-0 dark:hover:text-white",
           className
