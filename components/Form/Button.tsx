@@ -5,6 +5,8 @@ import { Spinner } from "@/components";
 import type { AppProps } from "@/types";
 
 const colors = {
+  default:
+    "bg-gray-400/50 hover:bg-gray-400/70 active:bg-gray-400/50 text-gray-900 dark:bg-gray-600/50 dark:text-gray-50 dark:hover:bg-gray-600/70 dark:active:bg-gray-600/50",
   primary:
     "bg-primary-600 dark:bg-primary-500 text-gray-50 dark:text-gray-900 hover:bg-primary-500 dark:hover:bg-primary-400 active:bg-primary-600 dark:active:bg-primary-500 ring-primary-500/40",
   secondary:
@@ -29,7 +31,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
-      color = "primary",
+      color = "default",
       size = "md",
       className,
       startIcon,
@@ -48,7 +50,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className,
           colors[color],
           sizes[size],
-          "flex items-center justify-center rounded-md font-medium shadow-sm duration-100 focus:outline-none focus:ring disabled:cursor-not-allowed disabled:opacity-70"
+          "flex items-center justify-center rounded-md font-medium shadow-sm outline-none duration-100 focus:outline-none focus:ring disabled:cursor-not-allowed disabled:opacity-70"
         )}
       >
         {isLoading && <Spinner size="sm" className="text-current" />}
