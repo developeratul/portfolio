@@ -6,8 +6,8 @@ import type { AppProps } from "@/types";
 
 const colors = {
   default: "",
-  primary: "text-primary-500",
-  secondary: "text-secondary-500",
+  primary: "text-primary-600 dark:text-primary-500",
+  secondary: "text-secondary-600 dark:text-secondary-500",
 };
 
 export type LinkProps = {
@@ -22,7 +22,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, href, color = "default", className, isExternal = false, ...props }, ref) => {
     return (
       <NextLink
-        target={isExternal ? "_blank" : "_self"}
+        {...(isExternal ? { target: "_blank", referrerPolicy: "no-referrer" } : {})}
         className={clsx("inline-block hover:underline", colors[color], className)}
         {...props}
         ref={ref}

@@ -1,29 +1,35 @@
 import Image from "next/image";
 
-import { HStack, SectionBase, SectionTitle } from "@/components";
+import { HStack, Link, SectionBase, SectionTitle } from "@/components";
 
 export function About() {
   return (
-    <SectionBase>
+    <SectionBase id="about">
       <HStack className="flex flex-col items-center justify-center gap-5 lg:flex-row lg:items-start lg:gap-16">
         <div className="grid max-w-xl flex-1">
           <SectionTitle no="01" title="About me" className="mb-4" />
           <div className="grid gap-5">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati praesentium,
-              dolorum voluptate odio consectetur quaerat nam voluptatum commodi omnis ut numquam
-              ducimus aspernatur reiciendis voluptatem. Hic laudantium provident placeat eaque.
+              Hello! My name is Ratul, also known as DevR. I have over two years of experience as a
+              full-stack developer. I build web apps that are extremely scalable, responsive,
+              user-friendly, and FAST from the ground up. I have created multiple successful web
+              apps for European clients while ensuring complete client satisfaction. They&apos;re
+              now profitable!
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium ab
-              reprehenderit sed consectetur officia ratione soluta minima tenetur itaque.
+              I build custom web solutions. My primary tech stack is TypeScript, Next Js, Tailwind
+              CSS, Prisma, and tRPC. This is known as the{" "}
+              <Link color="primary" isExternal href="http://create.t3.gg">
+                T3 stack
+              </Link>
+              . I have worked with MERN and PERN stack as well. I write clean code and follow the
+              best practices. My code ensures security, browser compatibility, performance, and
+              more!
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quae itaque nam
-              voluptate molestias. Quaerat minima omnis excepturi cumque pariatur at totam,
-              voluptate sunt tempora aspernatur architecto repellat laborum nemo.
+              I am available for freelance and remote work. So, if that&apos;s what you&apos;re
+              looking for, you may consider hiring me.
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, animi!</p>
           </div>
         </div>
         <Image
@@ -31,7 +37,7 @@ export function About() {
           alt="Developer Ratul"
           width={300}
           height={300}
-          className="aspect-square rounded-xl object-cover shadow-md"
+          className="aspect-square border-4 border-primary-600 object-cover shadow-[10px_10px_0px_0px] shadow-primary-600 duration-500 hover:shadow-none"
           loading="lazy"
         />
       </HStack>
