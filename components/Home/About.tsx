@@ -7,7 +7,7 @@ export function About() {
     <SectionBase id="about">
       <HStack className="flex flex-col items-center justify-center gap-5 lg:flex-row lg:items-start lg:gap-16">
         <div className="grid max-w-xl flex-1">
-          <SectionTitle no="01" title="About me" className="mb-4" />
+          <SectionTitle no="01" title="About me" className="mb-[1.5rem]" />
           <div className="grid gap-5">
             <p>
               Hello! My name is Ratul, also known as DevR. I have over two years of experience as a

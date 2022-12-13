@@ -14,7 +14,8 @@ export function Nav() {
 
   const toggleNavBar = () => {
     const listNav = listNavRef.current;
-    listNav?.classList.toggle("translate-x-0");
+    listNav?.classList.toggle("!translate-x-0");
+    document.body.classList.toggle("overflow-y-hidden");
   };
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export function Nav() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 left-0 bg-background-50 py-3 duration-300 dark:bg-background-500"
+      className="sticky top-0 left-0 bg-white py-3 duration-300 dark:bg-background-500"
     >
       <Container size="lg">
         <div className="flex items-center justify-between">
@@ -45,7 +46,7 @@ export function Nav() {
           </div>
           <div
             ref={listNavRef}
-            className="absolute top-0 right-0 flex h-screen w-full max-w-md translate-x-full transform flex-col items-start justify-center gap-5 bg-white/70 p-5 shadow-lg backdrop-blur-lg duration-300 dark:bg-background-600/70 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:justify-between lg:!bg-transparent lg:!p-0 lg:shadow-none lg:backdrop-blur-none"
+            className="fixed top-0 right-0 flex h-screen w-screen max-w-md translate-x-full transform flex-col items-start justify-center gap-5 bg-white/70 p-5 shadow-lg backdrop-blur-lg duration-300 dark:bg-background-600/70 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:justify-between lg:!bg-transparent lg:!p-0 lg:shadow-none lg:backdrop-blur-none"
           >
             <NavLink href="/">Home</NavLink>
             <NavLink href="/">About</NavLink>
