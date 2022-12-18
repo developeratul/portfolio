@@ -50,7 +50,7 @@ export function Nav() {
           >
             <NavLink href="/">Home</NavLink>
             <NavLink href="/">About</NavLink>
-            <NavLink href="/">Portfolio</NavLink>
+            <NavLink href="/">Projects</NavLink>
             <NavLink href="/">Skills</NavLink>
             <NavLink href="/">Services</NavLink>
             <NavLink href="/">Contact</NavLink>

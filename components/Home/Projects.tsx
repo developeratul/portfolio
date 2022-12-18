@@ -73,7 +73,7 @@ export function Project(props: ProjectProps) {
           <p className="mb-[2px] text-sm uppercase text-primary-600 dark:text-primary-500">
             {category}
           </p>
-          <h2 className="text-2xl ">{name}</h2>
+          <h2 className="text-2xl">{name}</h2>
         </div>
         <div className="grid grid-cols-3 gap-3 lg:grid-cols-4">
           {stack.map((tech, index) => (
