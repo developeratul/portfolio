@@ -32,7 +32,7 @@ export function Nav() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 left-0 bg-white py-3 duration-300 dark:bg-background-500"
+      className="sticky top-0 left-0 z-10 bg-white py-3 duration-300 dark:bg-background-500"
     >
       <Container size="lg">
         <div className="flex items-center justify-between">

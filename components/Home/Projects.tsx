@@ -59,7 +59,7 @@ export function Project(props: ProjectProps) {
   return (
     <div
       id={id}
-      className="flex flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
+      className="flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md duration-300 hover:-translate-y-3 hover:scale-[1.01] hover:shadow-lg dark:bg-background-400"
     >
       <Image
         src={imageURL}
