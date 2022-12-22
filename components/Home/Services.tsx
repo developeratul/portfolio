@@ -1,7 +1,9 @@
 "use client";
+import clsx from "clsx";
 import Image from "next/image";
 
 import { Section } from "@/components";
+import { hoverAnimations } from "@/constants/styles";
 
 type Service = {
   id: string;
@@ -39,7 +41,12 @@ type ServiceProps = Service;
 function Service(props: ServiceProps) {
   const { name, description, imageURL } = props;
   return (
-    <div className="grid place-items-center gap-5 rounded-md bg-white px-5 py-7 shadow-md dark:bg-background-400 lg:py-10 lg:px-7">
+    <div
+      className={clsx(
+        "grid place-items-center gap-5 rounded-md bg-white px-5 py-7 shadow-md dark:bg-background-400 lg:py-10 lg:px-7",
+        hoverAnimations.card
+      )}
+    >
       <Image src={imageURL} alt={name} width={100} height={100} />
       <div className="grid gap-1 text-center">
         <h2 className="text-xl font-medium text-primary-600 dark:text-primary-500">{name}</h2>
