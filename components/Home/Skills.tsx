@@ -16,13 +16,10 @@ type SkillProps = Skill;
 function Skill(props: SkillProps) {
   const { id, name, icon, experienceLevel } = props;
   return (
-    <div
-      id={id}
-      className="text-mid grid place-items-center gap-4 fill-current transition-all duration-200 ease-in-out dark:text-gray-400"
-    >
-      <div className="h-16 w-16 sm:h-20 sm:w-20">{icon}</div>
+    <div id={id} className="grid place-items-center gap-4">
+      <div className="h-16 w-16 fill-gray-500 dark:fill-gray-400 sm:h-20 sm:w-20">{icon}</div>
       <div className="text-center">
-        <h2 className="text-base font-medium text-black dark:text-white">{name}</h2>
+        <h2 className="text-base font-medium text-primary-600 dark:text-primary-500">{name}</h2>
         <p className="text-xs text-gray-500 dark:text-gray-400">{experienceLevel}</p>
       </div>
     </div>
