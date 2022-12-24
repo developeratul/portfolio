@@ -37,7 +37,7 @@ export function About() {
           alt="Developer Ratul"
           width={300}
           height={300}
-          className="aspect-square border-4 border-primary-600 object-cover shadow-[10px_10px_0px_0px] shadow-primary-600 duration-500 hover:shadow-none"
+          className="aspect-square border-4 border-primary-600 object-cover shadow-[10px_10px_0px_0px] shadow-primary-600 duration-500 hover:shadow-none dark:border-primary-500 dark:shadow-primary-500"
           loading="lazy"
         />
       </HStack>

@@ -1,11 +1,9 @@
 "use client";
 
 import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import Image from "next/image";
 
 import { Button, Section } from "@/components";
-import { hoverAnimations } from "@/constants/styles";
 
 export type Project = {
   id: string;
@@ -20,51 +18,24 @@ export type Project = {
 
 type ProjectProps = Project;
 
-const projectData: Project[] = [
-  {
-    id: "1",
-    category: "Currently working on",
-    name: "DevR Commerce",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore error quod ea consectetur esse, tenetur et laboriosam nisi numquam!",
-    imageURL: "/devr_commerce.webp",
-    stack: ["Next Js", "MUI", "Next Js"],
-    preview: "http://google.com",
-    repo: "http://github.com",
-  },
-  {
-    id: "2",
-    category: "Currently working on",
-    name: "DevR Commerce",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore error quod ea consectetur esse, tenetur et laboriosam nisi numquam!",
-    imageURL: "/devr_commerce.webp",
-    stack: ["Next Js", "TypeScript", "MUI"],
-    preview: "http://google.com",
-    repo: "http://github.com",
-  },
-  {
-    id: "3",
-    category: "Currently working on",
-    name: "DevR Commerce",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore error quod ea consectetur esse, tenetur et laboriosam nisi numquam!",
-    imageURL: "/devr_commerce.webp",
-    stack: ["Next Js", "TypeScript", "MUI"],
-    preview: "http://google.com",
-    repo: "http://github.com",
-  },
-];
+const projectData: Project[] = Array(6).fill({
+  id: "1",
+  category: "Currently working on",
+  name: "DevR Commerce",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore error quod ea consectetur esse, tenetur et laboriosam nisi numquam!",
+  imageURL: "/devr_commerce.webp",
+  stack: ["Next Js", "MUI", "Next Js"],
+  preview: "http://google.com",
+  repo: "http://github.com",
+});
 
 export function Project(props: ProjectProps) {
   const { name, description, id, imageURL, category, stack, preview, repo } = props;
   return (
     <div
       id={id}
-      className={clsx(
-        "flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400",
-        hoverAnimations.card
-      )}
+      className="flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
     >
       <Image
         src={imageURL}
@@ -80,7 +51,7 @@ export function Project(props: ProjectProps) {
           </p>
           <h2 className="text-2xl">{name}</h2>
         </div>
-        <div className="grid grid-cols-3 gap-3 lg:grid-cols-4">
+        <div className="flex flex-wrap gap-2">
           {stack.map((tech, index) => (
             <span
               key={index}

@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Image from "next/image";
 
 import { Section } from "@/components";
-import { hoverAnimations } from "@/constants/styles";
 
 type Service = {
   id: string;
@@ -12,29 +11,13 @@ type Service = {
   imageURL: string;
 };
 
-const serviceData: Service[] = [
-  {
-    id: "1",
-    name: "Front-end Development",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, eligendi rem illum ex et fuga sint quo totam soluta!",
-    imageURL: "/react-logo.svg",
-  },
-  {
-    id: "2",
-    name: "Back-end Development",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, eligendi rem illum ex et fuga sint quo totam soluta!",
-    imageURL: "/node-logo.svg",
-  },
-  {
-    id: "3",
-    name: "Full-stack Development",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, eligendi rem illum ex et fuga sint quo totam soluta!",
-    imageURL: "/next-logo.svg",
-  },
-];
+const serviceData: Service[] = Array(3).fill({
+  id: "1",
+  name: "Front-end Development",
+  description:
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, eligendi rem illum ex et fuga sint quo totam soluta!",
+  imageURL: "/react-logo.svg",
+});
 
 type ServiceProps = Service;
 
@@ -43,8 +26,8 @@ function Service(props: ServiceProps) {
   return (
     <div
       className={clsx(
-        "grid place-items-center gap-5 rounded-md bg-white px-5 py-7 shadow-md dark:bg-background-400 lg:py-10 lg:px-7",
-        hoverAnimations.card
+        "grid place-items-center gap-5 border-2 border-primary-600 bg-white px-5 py-7 shadow-[7px_7px_0px_0px] shadow-primary-600 duration-300 dark:border-primary-500 dark:bg-background-500 dark:shadow-primary-500 lg:py-10 lg:px-7",
+        "hover:shadow-none"
       )}
     >
       <Image src={imageURL} alt={name} width={100} height={100} />
@@ -59,7 +42,7 @@ function Service(props: ServiceProps) {
 export function Services() {
   return (
     <Section no="04" title="Services">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
         {serviceData.map((service) => (
           <Service key={service.id} {...service} />
         ))}
