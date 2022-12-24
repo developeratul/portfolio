@@ -58,8 +58,8 @@ function Service(props: ServiceProps) {
 
 export function Services() {
   return (
-    <Section no="03" title="Services">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+    <Section no="04" title="Services">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
         {serviceData.map((service) => (
           <Service key={service.id} {...service} />
         ))}

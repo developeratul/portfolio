@@ -115,7 +115,7 @@ export function Project(props: ProjectProps) {
 export function Projects() {
   return (
     <Section no="02" title="Projects">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
         {projectData.map((project) => (
           <Project {...project} key={project.id} />
         ))}
