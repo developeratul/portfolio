@@ -11,13 +11,27 @@ type Service = {
   imageURL: string;
 };
 
-const serviceData: Service[] = Array(3).fill({
-  id: "1",
-  name: "Front-end Development",
-  description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, eligendi rem illum ex et fuga sint quo totam soluta!",
-  imageURL: "/react-logo.svg",
-});
+const serviceData: Service[] = [
+  {
+    id: "1",
+    name: "Front-end Development",
+    description: "Build stunning front-ends with React which be fast and fully responsive.",
+    imageURL: "/react-logo.svg",
+  },
+  {
+    id: "2",
+    name: "Back-end Development",
+    description: "Build custom rest APIs with Node.js and Express.js and add features to it.",
+    imageURL: "/node-logo.svg",
+  },
+  {
+    id: "3",
+    name: "Full-stack Development",
+    description:
+      "Build a full-stack web app with custom front-end and back-end from the ground up.",
+    imageURL: "/next-logo.svg",
+  },
+];
 
 type ServiceProps = Service;
 
