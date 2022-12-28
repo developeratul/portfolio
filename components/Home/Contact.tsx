@@ -6,10 +6,10 @@ import { z } from "zod";
 import { Button, Form, Input, Section, TextArea } from "@/components";
 
 const schema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-  subject: z.string(),
-  message: z.string(),
+  name: z.string().trim().min(1, "Please enter your name"),
+  email: z.string().email().trim(),
+  subject: z.string().min(5, "Your subject is too short").trim(),
+  message: z.string().min(10, "Your message is too short").trim(),
 });
 
 type ContactValues = {
@@ -20,6 +20,9 @@ type ContactValues = {
 };
 
 export function Contact() {
+  const handleSubmit = async (values: ContactValues) => {
+    console.log({ values });
+  };
   return (
     <Section no="05" title="Contact">
       <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:justify-between">
@@ -32,9 +35,7 @@ export function Contact() {
         />
 
         <Form<ContactValues, typeof schema>
-          onSubmit={() => {
-            console.log("submit");
-          }}
+          onSubmit={handleSubmit}
           className="w-full max-w-2xl flex-1"
           schema={schema}
         >
