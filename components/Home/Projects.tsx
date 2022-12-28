@@ -18,17 +18,38 @@ export type Project = {
 
 type ProjectProps = Project;
 
-const projectData: Project[] = Array(6).fill({
-  id: "1",
-  category: "Currently working on",
-  name: "DevR Commerce",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore error quod ea consectetur esse, tenetur et laboriosam nisi numquam!",
-  imageURL: "/devr_commerce.webp",
-  stack: ["Next Js", "MUI", "Next Js"],
-  preview: "http://google.com",
-  repo: "http://github.com",
-});
+const projectData: Project[] = [
+  {
+    id: "1",
+    category: "Launched",
+    name: "DevR Commerce",
+    description: "Custom E-Commerce store having Cart and Checkout feature.",
+    imageURL: "/devr-commerce.png",
+    stack: ["TypeScript", "Next Js", "React", "MUI", "Commerce Js", "Stripe"],
+    preview: "http://devr-commerce.vercel.app",
+    repo: "http://github.com/developeratul/devr-commerce",
+  },
+  {
+    id: "2",
+    category: "Launched",
+    name: "MEME Site",
+    description: "A MEME sharing platform where you can browse and share memes.",
+    imageURL: "/meme-site.png",
+    stack: ["TypeScript", "React Js", "Chakra UI", "Cloudinary", "Node Js", "Express Js"],
+    preview: "http://meme-site.onrender.com",
+    repo: "http://github.com/developeratul/meme-site",
+  },
+  {
+    id: "3",
+    category: "In Progress",
+    name: "MemSync",
+    description: "A note taking app built for developers to be productive and organized.",
+    imageURL: "/memsync.png",
+    stack: ["TypeScript", "Next Js", "React Js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth Js"],
+    preview: "http://meme-site.onrender.com",
+    repo: "http://github.com/developeratul/meme-site",
+  },
+];
 
 export function Project(props: ProjectProps) {
   const { name, description, id, imageURL, category, stack, preview, repo } = props;
@@ -51,7 +72,7 @@ export function Project(props: ProjectProps) {
           </p>
           <h2 className="text-2xl">{name}</h2>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 p-2">
           {stack.map((tech, index) => (
             <span
               key={index}
