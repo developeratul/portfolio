@@ -23,12 +23,14 @@ export function ColorMode(props: AppProps) {
     if (currentMode) {
       storage.set(STORAGE_KEY, currentMode);
       document.documentElement.classList.add(currentMode);
+      document.documentElement.style.colorScheme = currentMode;
       setMode(currentMode);
     } else {
       setMode((prevMode) => {
         const newMode = prevMode === "light" ? "dark" : "light";
         storage.set(STORAGE_KEY, newMode);
         document.documentElement.classList.replace(prevMode, newMode);
+        document.documentElement.style.colorScheme = newMode;
         return newMode;
       });
     }
