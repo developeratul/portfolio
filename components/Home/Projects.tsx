@@ -46,8 +46,7 @@ const projectData: Project[] = [
     description: "A note taking app built for developers to be productive and organized.",
     imageURL: "/memsync.png",
     stack: ["TypeScript", "Next Js", "React Js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth Js"],
-    preview: "http://meme-site.onrender.com",
-    repo: "http://github.com/developeratul/meme-site",
+    repo: "http://github.com/developeratul/memsync",
   },
 ];
 
