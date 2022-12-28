@@ -1,6 +1,8 @@
 "use client";
+import emailjs from "@emailjs/browser";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import React from "react";
 import { z } from "zod";
 
 import { Button, Form, Input, Section, TextArea } from "@/components";
@@ -8,21 +10,41 @@ import { Button, Form, Input, Section, TextArea } from "@/components";
 const schema = z.object({
   name: z.string().trim().min(1, "Please enter your name"),
   email: z.string().email().trim(),
-  subject: z.string().min(5, "Your subject is too short").trim(),
   message: z.string().min(10, "Your message is too short").trim(),
 });
 
 type ContactValues = {
   name: string;
   email: string;
-  subject: string;
   message: string;
 };
 
 export function Contact() {
+  const [isProcessing, setProcessing] = React.useState(false);
+
   const handleSubmit = async (values: ContactValues) => {
-    console.log({ values });
+    setProcessing(true);
+    try {
+      const { name, email, message } = values;
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        {
+          from_name: name,
+          to_name: process.env.NEXT_PUBLIC_EMAIL_NAME,
+          message,
+          reply_to: email,
+        },
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+      );
+    } catch (err: any) {
+      alert(err?.message);
+    } finally {
+      setProcessing(false);
+    }
   };
+
   return (
     <Section no="05" title="Contact">
       <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:justify-between">
@@ -52,17 +74,13 @@ export function Contact() {
                 registration={register("email")}
                 error={formState.errors["email"]}
               />
-              <Input
-                label="Subject"
-                registration={register("subject")}
-                error={formState.errors["subject"]}
-              />
               <TextArea
                 label="Message"
                 registration={register("message")}
                 error={formState.errors["message"]}
               />
               <Button
+                isLoading={isProcessing}
                 startIcon={<PaperAirplaneIcon width={18} height={18} />}
                 className="w-full"
                 color="primary"
