@@ -21,7 +21,10 @@ const sizes = {
 
 type IconProps = { startIcon?: React.ReactElement; endIcon?: React.ReactElement };
 
-export interface ButtonProps extends IconProps, AppProps, React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends IconProps,
+    AppProps,
+    React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: keyof typeof colors;
   size?: keyof typeof sizes;
   isLoading?: boolean;
