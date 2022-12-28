@@ -15,21 +15,22 @@ const serviceData: Service[] = [
   {
     id: "1",
     name: "Front-end Development",
-    description: "Build stunning front-ends with React which be fast and fully responsive.",
-    imageURL: "/react-logo.svg",
+    description:
+      "Design and Develop modern, responsive, accessible, optimized and high-performing front-ends.",
+    imageURL: "/front-end.png",
   },
   {
     id: "2",
     name: "Back-end Development",
-    description: "Build custom rest APIs with Node.js and Express.js and add features to it.",
+    description: "Build and Develop secure and highly scalable back-ends with Node Js.",
     imageURL: "/node-logo.svg",
   },
   {
     id: "3",
     name: "Full-stack Development",
     description:
-      "Build a full-stack web app with custom front-end and back-end from the ground up.",
-    imageURL: "/next-logo.svg",
+      "Build a complete app solution from the scratch by having custom front-end and back-end.",
+    imageURL: "/full-stack.png",
   },
 ];
 
