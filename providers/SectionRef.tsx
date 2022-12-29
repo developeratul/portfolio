@@ -35,7 +35,7 @@ export function SectionRefProvider(props: SectionRefProps) {
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
       });
     }
   };
@@ -56,3 +56,25 @@ export function SectionRefProvider(props: SectionRefProps) {
 }
 
 export const useSectionRefContextValue = () => React.useContext(SectionRefContext);
+
+type ScrollToProps = AppProps & {
+  to: keyof SectionRefContextValue["refs"];
+};
+
+export function ScrollTo(props: ScrollToProps) {
+  const { to, children } = props;
+  const contextValue = useSectionRefContextValue();
+  if (contextValue === undefined) return <></>;
+  const { refs, scrollTo } = contextValue;
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollTo(refs[to]);
+  };
+
+  return (
+    <a href="" onClick={handleClick}>
+      {children}
+    </a>
+  );
+}

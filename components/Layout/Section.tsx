@@ -33,7 +33,7 @@ export function SectionBase({ children, className, refKey, ...props }: SectionBa
   const { refs } = contextValue;
 
   return (
-    <section ref={refs[refKey]} className={clsx("py-20", className)} {...props}>
+    <section ref={refs[refKey]} className={clsx("scroll-m-10 py-20", className)} {...props}>
       <Container>{children}</Container>
     </section>
   );

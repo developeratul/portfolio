@@ -1,7 +1,7 @@
 "use client";
 import { Button, Container } from "@/components";
 import { links } from "@/data/links";
-import { useSectionRefContextValue } from "@/providers/SectionRef";
+import { ScrollTo, useSectionRefContextValue } from "@/providers/SectionRef";
 
 export function Hero() {
   const contextValue = useSectionRefContextValue();
@@ -24,7 +24,9 @@ export function Hero() {
             client satisfaction.
           </p>
           <div className="flex gap-3">
-            <Button color="primary">See my projects</Button>
+            <ScrollTo to="projects">
+              <Button color="primary">See my projects</Button>
+            </ScrollTo>
             <a href={links.fiverr} target="_blank" rel="noopener noreferrer">
               <Button color="secondary">Hire me</Button>
             </a>
