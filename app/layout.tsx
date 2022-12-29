@@ -2,6 +2,7 @@ import { JetBrains_Mono } from "@next/font/google";
 import clsx from "clsx";
 
 import { Nav } from "@/components/common/Nav";
+import { Toaster } from "@/components/Feedback/Toaster";
 import { ColorMode } from "@/providers/ColorMode";
 import type { AppProps } from "@/types";
 import "../styles/globals.css";
@@ -18,6 +19,7 @@ export default async function RootLayout(props: AppProps) {
     <html className={clsx(jetbrainsMono.variable)} lang="en">
       <body className="h-screen w-screen overflow-x-hidden bg-white font-mono font-normal text-gray-900 dark:bg-background-500 dark:text-gray-50">
         <ColorMode>
+          <Toaster />
           <main>
             <Nav />
             <div>{children}</div>

@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import React from "react";
+import { toast } from "react-hot-toast";
 import { z } from "zod";
 
 import { Button, Form, Input, Section, TextArea } from "@/components";
@@ -38,8 +39,10 @@ export function Contact() {
         },
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
       );
+
+      toast.success("Your message want sent. You will hear back from me within a business day.");
     } catch (err: any) {
-      alert(err?.message);
+      toast.error(err);
     } finally {
       setProcessing(false);
     }
