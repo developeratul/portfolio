@@ -6,7 +6,7 @@ import React from "react";
 import { toast } from "react-hot-toast";
 import { z } from "zod";
 
-import { Button, Form, Input, Section, TextArea } from "@/components";
+import { Button, Form, Input, Section, TextArea, type SubmitFn } from "@/components";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Please enter your name"),
@@ -23,7 +23,7 @@ type ContactValues = {
 export function Contact() {
   const [isProcessing, setProcessing] = React.useState(false);
 
-  const handleSubmit = async (values: ContactValues) => {
+  const handleSubmit: SubmitFn<ContactValues> = async (values, reset) => {
     setProcessing(true);
     try {
       const { name, email, message } = values;
@@ -40,6 +40,7 @@ export function Contact() {
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
       );
 
+      reset();
       toast.success("Your message want sent. You will hear back from me within a business day.");
     } catch (err: any) {
       toast.error(err);
