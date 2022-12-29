@@ -43,7 +43,7 @@ export function Contact() {
       reset();
       toast.success("Your message want sent. You will hear back from me within a business day.");
     } catch (err: any) {
-      toast.error(err);
+      toast.error(err?.message || err);
     } finally {
       setProcessing(false);
     }

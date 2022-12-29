@@ -37,7 +37,7 @@ const projectData: Project[] = [
     imageURL: "/meme-site.png",
     stack: ["TypeScript", "React Js", "Chakra UI", "Cloudinary", "Node Js", "Express Js"],
     preview: "http://meme-site.onrender.com",
-    repo: "http://github.com/developeratul/meme-site",
+    repo: "http://github.com/developeratul/meme-website",
   },
   {
     id: "3",

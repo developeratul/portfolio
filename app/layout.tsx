@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "@next/font/google";
 import clsx from "clsx";
 
+import { Footer } from "@/components/common/Footer";
 import { Nav } from "@/components/common/Nav";
 import { Toaster } from "@/components/Feedback/Toaster";
 import { ColorMode } from "@/providers/ColorMode";
@@ -24,6 +25,7 @@ export default async function RootLayout(props: AppProps) {
             <Nav />
             <div>{children}</div>
           </main>
+          <Footer />
         </ColorMode>
       </body>
     </html>

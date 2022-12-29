@@ -24,7 +24,7 @@ interface SectionBaseProps extends AppProps, HTMLAttributes<HTMLDivElement> {}
 
 export function SectionBase({ children, className, ...props }: SectionBaseProps) {
   return (
-    <section className={clsx("py-10", className)} {...props}>
+    <section className={clsx("py-20", className)} {...props}>
       <Container>{children}</Container>
     </section>
   );

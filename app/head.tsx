@@ -4,7 +4,7 @@ export default function Head() {
       <title>Developer Ratul | Full Stack Developer</title>
       <meta
         name="description"
-        content="Portfolio of Developer Ratul aka DevR who is a full-stack developer"
+        content="Official portfolio website of Minhazur Rahman Ratul aka DevR."
       />
       <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@ export default function Head() {
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta
         name="keywords"
-        content="Developer Ratul, DevR, Full-Stack Developer, Developer portfolio"
+        content="Developer Ratul, DevR, Minhazur Rahman Ratul, Full-Stack Developer, Developer portfolio"
       />
       <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
     </>
