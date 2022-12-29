@@ -50,7 +50,7 @@ export function Contact() {
   };
 
   return (
-    <Section no="05" title="Contact">
+    <Section refKey="contact" no="05" title="Contact">
       <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:justify-between">
         <Image
           width={250}

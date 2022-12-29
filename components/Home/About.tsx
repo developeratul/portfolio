@@ -1,10 +1,11 @@
+"use client";
 import Image from "next/image";
 
 import { HStack, Link, SectionBase, SectionTitle } from "@/components";
 
 export function About() {
   return (
-    <SectionBase id="about">
+    <SectionBase refKey="about" id="about">
       <HStack className="flex flex-col items-center justify-center gap-5 lg:flex-row lg:items-start lg:gap-16">
         <div className="grid max-w-xl flex-1">
           <SectionTitle no="01" title="About me" className="mb-[1.5rem]" />

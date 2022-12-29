@@ -1,10 +1,15 @@
 "use client";
-
 import { Button, Container } from "@/components";
+import { links } from "@/data/links";
+import { useSectionRefContextValue } from "@/providers/SectionRef";
 
 export function Hero() {
+  const contextValue = useSectionRefContextValue();
+  if (contextValue === undefined) return null;
+  const { refs } = contextValue;
+
   return (
-    <section className="py-32 sm:py-36 lg:py-48 xl:py-60">
+    <section ref={refs.home} className="py-32 sm:py-36 lg:py-48 xl:py-60">
       <Container>
         <div className="flex w-full max-w-3xl flex-col">
           <p className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
@@ -20,7 +25,9 @@ export function Hero() {
           </p>
           <div className="flex gap-3">
             <Button color="primary">See my projects</Button>
-            <Button color="secondary">Hire me</Button>
+            <a href={links.fiverr} target="_blank" rel="noopener noreferrer">
+              <Button color="secondary">Hire me</Button>
+            </a>
           </div>
         </div>
       </Container>

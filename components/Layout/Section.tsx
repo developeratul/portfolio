@@ -1,8 +1,11 @@
+"use client";
 import clsx from "clsx";
 import type { HTMLAttributes } from "react";
 import React from "react";
 
 import { Container, HStack } from "@/components";
+import type { SectionRefContextValue } from "@/providers/SectionRef";
+import { useSectionRefContextValue } from "@/providers/SectionRef";
 import type { AppProps } from "@/types";
 
 interface SectionTitleProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
@@ -20,11 +23,17 @@ export function SectionTitle({ title, no, className, ...props }: SectionTitlePro
   );
 }
 
-interface SectionBaseProps extends AppProps, HTMLAttributes<HTMLDivElement> {}
+interface SectionBaseProps extends AppProps, HTMLAttributes<HTMLDivElement> {
+  refKey: keyof SectionRefContextValue["refs"];
+}
 
-export function SectionBase({ children, className, ...props }: SectionBaseProps) {
+export function SectionBase({ children, className, refKey, ...props }: SectionBaseProps) {
+  const contextValue = useSectionRefContextValue();
+  if (contextValue === undefined) return <></>;
+  const { refs } = contextValue;
+
   return (
-    <section className={clsx("py-20", className)} {...props}>
+    <section ref={refs[refKey]} className={clsx("py-20", className)} {...props}>
       <Container>{children}</Container>
     </section>
   );

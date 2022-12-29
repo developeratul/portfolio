@@ -4,6 +4,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import React, { useEffect } from "react";
 
 import { Button, IconButton, Link, NavLink } from "@/components";
+import { links } from "@/data/links";
 import { ColorModeToggler } from "@/providers/ColorMode";
 
 import { Container } from "../Layout";
@@ -48,15 +49,17 @@ export function Nav() {
             ref={listNavRef}
             className="fixed top-0 right-0 flex h-screen w-screen max-w-md translate-x-full transform flex-col items-start justify-center gap-5 bg-white/70 p-5 shadow-lg backdrop-blur-lg duration-300 dark:bg-background-600/70 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:justify-between lg:!bg-transparent lg:!p-0 lg:shadow-none lg:backdrop-blur-none"
           >
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/">About</NavLink>
-            <NavLink href="/">Projects</NavLink>
-            <NavLink href="/">Skills</NavLink>
-            <NavLink href="/">Services</NavLink>
-            <NavLink href="/">Contact</NavLink>
-            <Button className="w-full lg:w-auto" color="primary">
-              Hire me
-            </Button>
+            <NavLink to="home">Home</NavLink>
+            <NavLink to="about">About</NavLink>
+            <NavLink to="projects">Projects</NavLink>
+            <NavLink to="skills">Skills</NavLink>
+            <NavLink to="services">Services</NavLink>
+            <NavLink to="contact">Contact</NavLink>
+            <a href={links.fiverr} target="_blank" rel="noopener noreferrer">
+              <Button className="w-full lg:w-auto" color="primary">
+                Hire me
+              </Button>
+            </a>
           </div>
           <div className="z-10 lg:hidden">
             <IconButton

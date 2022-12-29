@@ -5,6 +5,7 @@ import { Footer } from "@/components/common/Footer";
 import { Nav } from "@/components/common/Nav";
 import { Toaster } from "@/components/Feedback/Toaster";
 import { ColorMode } from "@/providers/ColorMode";
+import { SectionRefProvider } from "@/providers/SectionRef";
 import type { AppProps } from "@/types";
 import "../styles/globals.css";
 
@@ -22,8 +23,10 @@ export default async function RootLayout(props: AppProps) {
         <ColorMode>
           <Toaster />
           <main>
-            <Nav />
-            <div>{children}</div>
+            <SectionRefProvider>
+              <Nav />
+              <div>{children}</div>
+            </SectionRefProvider>
           </main>
           <Footer />
         </ColorMode>

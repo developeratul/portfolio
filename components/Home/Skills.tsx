@@ -532,7 +532,7 @@ const skillData: Skill[] = [
 
 export function Skills() {
   return (
-    <Section no="03" title="Skills">
+    <Section refKey="skills" no="03" title="Skills">
       <div className="grid w-full grid-cols-4 gap-x-4 gap-y-8 sm:grid-cols-4 md:grid-cols-7">
         {skillData.map((skill) => (
           <Skill {...skill} key={skill.id} />

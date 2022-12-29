@@ -16,7 +16,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         className={clsx(
           className,
-          "box-border inline-flex items-center justify-center !p-2.5 text-center align-middle !text-sm",
+          "inline-flex items-center justify-center !px-1 !py-3 text-center align-middle !text-base",
           isRounded && "rounded-full"
         )}
         {...props}
