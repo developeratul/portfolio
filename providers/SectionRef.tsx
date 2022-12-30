@@ -73,7 +73,7 @@ export function ScrollTo(props: ScrollToProps) {
   };
 
   return (
-    <a href="" onClick={handleClick}>
+    <a href="#" onClick={handleClick}>
       {children}
     </a>
   );
