@@ -18,6 +18,7 @@
     "@heroicons/react": "^2.0.13",
     "@hookform/resolvers": "^2.9.10",
     "@next/font": "^13.0.6",
+    "@vercel/analytics": "^0.1.6",
     "add": "^2.0.6",
     "clsx": "^1.2.1",
     "next": "13.0.0",
