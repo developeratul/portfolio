@@ -3,7 +3,7 @@ import clsx from "clsx";
 import type { AppProps } from "@/types";
 
 const sizes = {
-  md: "sm:px-10 md:ppx-20 lg:px-24 xl:px-32",
+  md: "sm:px-10 md:px-20 lg:px-24 xl:px-32",
   lg: "",
 };
 

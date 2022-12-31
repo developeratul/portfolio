@@ -1,12 +1,12 @@
 "use client";
 import emailjs from "@emailjs/browser";
-import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { AtSymbolIcon, ClockIcon, MapPinIcon, PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import React from "react";
 import { toast } from "react-hot-toast";
 import { z } from "zod";
 
-import { Button, Form, Input, Section, TextArea, type SubmitFn } from "@/components";
+import { Button, Form, Input, Link, Section, TextArea, type SubmitFn } from "@/components";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Please enter your name"),
@@ -51,18 +51,54 @@ export function Contact() {
 
   return (
     <Section refKey="contact" no="05" title="Contact">
-      <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:justify-between">
-        <Image
-          width={250}
-          height={250}
-          src="/contact.svg"
-          alt="Contact illustration"
-          className="w-full max-w-md"
-        />
+      <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row-reverse lg:items-start lg:justify-between">
+        <div className="flex w-full max-w-lg flex-col items-center justify-center gap-10">
+          <Image
+            width={250}
+            height={250}
+            src="/contact.svg"
+            alt="Contact illustration"
+            className="w-full max-w-md"
+          />
+          <div className="flex flex-wrap items-center justify-between gap-5">
+            <div className="flex items-center justify-between gap-2">
+              <div>
+                <MapPinIcon
+                  width={20}
+                  height={20}
+                  className="text-primary-600 dark:text-primary-500"
+                />
+              </div>
+              <h3 className="text-sm">Dhaka, Bangladesh</h3>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <div>
+                <ClockIcon
+                  width={20}
+                  height={20}
+                  className="text-primary-600 dark:text-primary-500"
+                />
+              </div>
+              <h3 className="text-sm">UTC+6 BST</h3>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <div>
+                <AtSymbolIcon
+                  width={20}
+                  height={20}
+                  className="text-primary-600 dark:text-primary-500"
+                />
+              </div>
+              <h3 className="text-sm">
+                <Link href="mailto:azammmgol@gmail.com">azammmgol@gmail.com</Link>
+              </h3>
+            </div>
+          </div>
+        </div>
 
         <Form<ContactValues, typeof schema>
           onSubmit={handleSubmit}
-          className="w-full max-w-2xl flex-1"
+          className="w-full max-w-xl flex-1"
           schema={schema}
         >
           {({ register, formState }) => (
