@@ -4,14 +4,10 @@ This is the official repository of my portfolio website.
 
 ## 🚀 Demo
 
----
-
 ![DevR portfolio demo](demo/devr-portfolio.jpg)
 Visit: [http://developeratul.vercel.app](http://developeratul.vercel.app)
 
 ## 🧐 Features
-
----
 
 - Responsive Menu Bar 📃
 - Hero section 🦸
@@ -25,8 +21,6 @@ Visit: [http://developeratul.vercel.app](http://developeratul.vercel.app)
 
 ## 🧑‍💻 Tech Stack
 
----
-
 - Next Js
 - React Js
 - Tailwind CSS
@@ -39,8 +33,6 @@ Visit: [http://developeratul.vercel.app](http://developeratul.vercel.app)
 > This template is free to use. You can customize this template and turn it into your own portfolio. Giving attribution to the author would be highly appreciated.
 
 ## ⏩ Quick Start
-
----
 
 Make sure you have those dependencies:
 
@@ -65,19 +57,13 @@ yarn dev
 
 ## 🍰 Contributing
 
----
-
 Pull Requests are always welcome! Send a PR if you see a way to improve or fix something (Even a Typo). Please contribute using [GitHub Flow](http://guides.github.com/introduction/flow). Create a branch, add commits, and open a pull request. After your PR has been merged, you will be added to the contributors section.
 
 ## 🛡️ License
 
----
-
 This project is under MIT license
 
 ## 👨‍💻 Author
-
----
 
 ## 👤 Minhazur Rahman Ratul
 
