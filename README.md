@@ -65,7 +65,7 @@ This project is under MIT license
 
 ## 👨‍💻 Author
 
-## 👤 Minhazur Rahman Ratul
+### 👤 Minhazur Rahman Ratul
 
 - Twitter: [@developeratul](https://twitter.com/developeratul)
 - Github: [@developeratul](https://github.com/developeratul)
