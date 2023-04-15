@@ -26,7 +26,7 @@ const projectData: Project[] = [
     description: "Custom E-Commerce store having Cart and Checkout feature.",
     imageURL: "/devr-commerce.png",
     stack: ["TypeScript", "Next Js", "React", "MUI", "Commerce Js", "Stripe"],
-    preview: "http://devr-commerce.vercel.app",
+    preview: "https://devr-commerce.onrender.com",
     repo: "http://github.com/developeratul/devr-commerce",
   },
   {
@@ -38,15 +38,6 @@ const projectData: Project[] = [
     stack: ["TypeScript", "React Js", "Chakra UI", "Cloudinary", "Node Js", "Express Js"],
     preview: "http://meme-site.onrender.com",
     repo: "http://github.com/developeratul/meme-website",
-  },
-  {
-    id: "3",
-    category: "In Progress",
-    name: "MemSync",
-    description: "A note taking app built for developers to be productive and organized.",
-    imageURL: "/memsync.png",
-    stack: ["TypeScript", "Next Js", "React Js", "tRPC", "Prisma", "Tailwind CSS", "NextAuth Js"],
-    repo: "http://github.com/developeratul/memsync",
   },
 ];
 
