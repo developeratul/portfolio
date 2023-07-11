@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import { HStack, Link, SectionBase, SectionTitle } from "@/components";
+import { HStack, SectionBase, SectionTitle } from "@/components";
 
 export function About() {
   return (
@@ -11,25 +11,18 @@ export function About() {
           <SectionTitle no="01" title="About me" className="mb-[1.5rem]" />
           <div className="grid gap-5">
             <p>
-              Hello! My name is Ratul, also known as DevR. I have over two years of experience as a
-              full-stack developer. I build web apps that are extremely scalable, responsive,
-              user-friendly, and FAST from the ground up. I have created multiple successful web
-              apps for European clients while ensuring complete client satisfaction. They&apos;re
-              now profitable!
+              Hello! I am Ratul a professional freelance full-stack developer building production
+              level from scratch using modern technologies such as React, Next.js, TypeScript, tRPC,
+              Next-auth, Tailwind CSS, and many more.
             </p>
             <p>
-              I build custom web solutions. My primary tech stack is TypeScript, Next Js, Tailwind
-              CSS, Prisma, and tRPC. This is known as the{" "}
-              <Link color="primary" isExternal href="http://create.t3.gg">
-                T3 stack
-              </Link>
-              . I have worked with MERN and PERN stack as well. I write clean code and follow the
-              best practices. My code ensures security, browser compatibility, performance, and
-              more!
+              I have experience in building SaaS applications. I have built multiple SaaS products
+              and have expertise in integrating payment processors such as Stripe and Lemon Squeezy.
+              I love building products rather than projects.
             </p>
             <p>
-              I am available for freelance and remote work. So, if that&apos;s what you&apos;re
-              looking for, you may consider hiring me.
+              Other that that, I am a writer. I write blogs to help my fellow developers and share
+              my tiny knowledge.
             </p>
           </div>
         </div>

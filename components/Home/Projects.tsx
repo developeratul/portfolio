@@ -1,8 +1,12 @@
 "use client";
 
 import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
+import ProjectDevRCommerceSrc from "@/assets/project-images/devr-commerce.png";
+import ProjectMemeSiteSrc from "@/assets/project-images/meme-site.png";
+import ProjectZioLandingPageSrc from "@/assets/project-images/zion-landing-page.jpeg";
 import { Button, Section } from "@/components";
 
 export type Project = {
@@ -10,7 +14,7 @@ export type Project = {
   category: string;
   name: string;
   description: string;
-  imageURL: string;
+  imageURL: string | StaticImageData;
   stack: string[];
   repo?: string;
   preview?: string;
@@ -24,7 +28,7 @@ const projectData: Project[] = [
     category: "Launched",
     name: "DevR Commerce",
     description: "Custom E-Commerce store having Cart and Checkout feature.",
-    imageURL: "/devr-commerce.png",
+    imageURL: ProjectDevRCommerceSrc,
     stack: ["TypeScript", "Next Js", "React", "MUI", "Commerce Js", "Stripe"],
     preview: "https://devr-commerce.onrender.com",
     repo: "http://github.com/developeratul/devr-commerce",
@@ -34,10 +38,20 @@ const projectData: Project[] = [
     category: "Launched",
     name: "MEME Site",
     description: "A MEME sharing platform where you can browse and share memes.",
-    imageURL: "/meme-site.png",
+    imageURL: ProjectMemeSiteSrc,
     stack: ["TypeScript", "React Js", "Chakra UI", "Cloudinary", "Node Js", "Express Js"],
     preview: "http://meme-site.onrender.com",
     repo: "http://github.com/developeratul/meme-website",
+  },
+  {
+    id: "3",
+    category: "Launched",
+    name: "Landing page",
+    description: "A landing page with parallax scroll effects and animations",
+    imageURL: ProjectZioLandingPageSrc,
+    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    preview: "http://zion-blue.vercel.app",
+    repo: "http://github.com/developeratul/zion-landing-page",
   },
 ];
 
@@ -46,14 +60,13 @@ export function Project(props: ProjectProps) {
   return (
     <div
       id={id}
-      className="flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
+      className="group flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
     >
       <Image
         src={imageURL}
         alt={name}
         width={500}
-        height={500}
-        className="aspect-[2/1] w-full rounded-md object-cover"
+        className="h-[300px] w-full rounded-md bg-[top] object-cover duration-200 group-hover:object-contain"
       />
       <div className="flex flex-col gap-3">
         <div>

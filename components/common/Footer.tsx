@@ -1,4 +1,7 @@
 "use client";
+import Image from "next/image";
+
+import DevToLogoSrc from "@/assets/icons/dev-black.png";
 import { Container, IconButton } from "@/components";
 import { links } from "@/data/links";
 
@@ -46,6 +49,17 @@ export function Footer() {
                     ></path>
                   </svg>
                 }
+              />
+            </a>
+            <a
+              aria-label="Dev.to Link"
+              href={links.devTo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton
+                aria-label="Dev.to link button"
+                icon={<Image src={DevToLogoSrc} alt="Dev.to Logo" width={20} />}
               />
             </a>
           </div>
