@@ -12,8 +12,8 @@ export function About() {
           <div className="grid gap-5">
             <p>
               Hello! I am Ratul a professional freelance full-stack developer building production
-              level from scratch using modern technologies such as React, Next.js, TypeScript, tRPC,
-              Next-auth, Tailwind CSS, and many more.
+              level applications from scratch using modern technologies such as React, Next.js,
+              TypeScript, tRPC, Next-auth, Tailwind CSS, and many more.
             </p>
             <p>
               I have experience in building SaaS applications. I have built multiple SaaS products
