@@ -11,19 +11,20 @@ export function About() {
           <SectionTitle no="01" title="About me" className="mb-[1.5rem]" />
           <div className="grid gap-5">
             <p>
-              Hello! I am Ratul a professional freelance full-stack developer building production
-              level applications from scratch using modern technologies such as React, Next.js,
-              TypeScript, tRPC, Next-auth, Tailwind CSS, and many more.
+              Hello! I am Ratul a professional freelance full-stack developer with over 2 years of
+              experience building production level applications from scratch using modern
+              technologies such as React, Next.js, TypeScript, Tailwind CSS, and many other.
             </p>
             <p>
-              I have experience in building SaaS applications. I have built multiple SaaS products
-              and have expertise in integrating payment processors such as Stripe and Lemon Squeezy.
-              I love building products rather than projects.
+              In those two years, I had the opportunity to work with a variety of clients as well as
+              projects. While being a self-capable developer, I am also a good team player. I build
+              projects from start to finish and put them in production ensuring complete client
+              satisfaction. I like to build products instead of projects. I always keep myself up to
+              date with the latest trends in the industry and update my knowledge base. Other that
+              that, I am a writer. I write blogs to help my fellow developers and share my tiny
+              knowledge.
             </p>
-            <p>
-              Other that that, I am a writer. I write blogs to help my fellow developers and share
-              my tiny knowledge.
-            </p>
+            <p>I am open to collaborating on projects.</p>
           </div>
         </div>
         <Image
