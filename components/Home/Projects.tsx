@@ -5,8 +5,10 @@ import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
 import ProjectDevRCommerceSrc from "@/assets/project-images/devr-commerce.png";
+import Project4Src from "@/assets/project-images/file-converter.png";
 import ProjectMemeSiteSrc from "@/assets/project-images/meme-site.png";
-import ProjectZioLandingPageSrc from "@/assets/project-images/zion-landing-page.jpeg";
+import Project5Src from "@/assets/project-images/snagem.png";
+import ProjectZioLandingPageSrc from "@/assets/project-images/zion-landing-page.jpg";
 import { Button, Section } from "@/components";
 
 export type Project = {
@@ -34,6 +36,24 @@ const projectData: Project[] = [
     repo: "http://github.com/developeratul/devr-commerce",
   },
   {
+    id: "3",
+    category: "Launched",
+    name: "Landing page",
+    description: "A landing page with parallax scroll effects and animations",
+    imageURL: ProjectZioLandingPageSrc,
+    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    preview: "http://zion-blue.vercel.app",
+    repo: "http://github.com/developeratul/zion-landing-page",
+  },
+  {
+    id: "5",
+    category: "Launched",
+    name: "Snagem Dashboard",
+    description: "A beautifully designed and function dashboard (Done for a client)",
+    imageURL: Project5Src,
+    stack: ["React", "TypeScript", "Tailwind CSS", "Mantine UI", "Firebase"],
+  },
+  {
     id: "2",
     category: "Launched",
     name: "MEME Site",
@@ -44,14 +64,13 @@ const projectData: Project[] = [
     repo: "http://github.com/developeratul/meme-website",
   },
   {
-    id: "3",
+    id: "4",
     category: "Launched",
-    name: "Landing page",
-    description: "A landing page with parallax scroll effects and animations",
-    imageURL: ProjectZioLandingPageSrc,
-    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    preview: "http://zion-blue.vercel.app",
-    repo: "http://github.com/developeratul/zion-landing-page",
+    name: "File Converter",
+    description: "A file conversion app utilizing the CloudConvert API",
+    imageURL: Project4Src,
+    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "CloudConvert API"],
+    preview: "https://file-converter-devr.vercel.app",
   },
 ];
 
@@ -60,13 +79,14 @@ export function Project(props: ProjectProps) {
   return (
     <div
       id={id}
-      className="group flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
+      className="flex transform flex-col gap-5 rounded-md bg-white p-5 shadow-md dark:bg-background-400"
     >
       <Image
         src={imageURL}
         alt={name}
         width={500}
-        className="h-[300px] w-full rounded-md bg-[top] object-cover duration-200 group-hover:object-contain"
+        height={300}
+        className="h-[200px] w-full rounded-md bg-center object-cover duration-200"
       />
       <div className="flex flex-col gap-3">
         <div>
@@ -79,7 +99,7 @@ export function Project(props: ProjectProps) {
           {stack.map((tech, index) => (
             <span
               key={index}
-              className="inline-flex flex-auto items-center justify-center rounded-md bg-primary-600 py-1 px-3 text-center align-middle text-xs text-primary-50 dark:bg-primary-500 dark:text-primary-800"
+              className="inline-flex flex-auto items-center justify-center rounded-md bg-primary-600 py-1 px-3 text-center align-middle text-xs text-primary-50 dark:bg-primary-400 dark:text-primary-800"
             >
               {tech}
             </span>
