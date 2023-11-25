@@ -90,7 +90,7 @@ export function Contact() {
                 />
               </div>
               <h3 className="text-sm">
-                <Link href="mailto:azammmgol@gmail.com">azammmgol@gmail.com</Link>
+                <Link href="mailto:hello@developeratul.com">hello@developeratul.com</Link>
               </h3>
             </div>
           </div>
