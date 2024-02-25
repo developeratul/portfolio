@@ -46,7 +46,7 @@ function NavLink(props: { children: ReactNode; href: string }) {
 
 function NavLogo() {
   return (
-    <Avatar className="border">
+    <Avatar className="border invisible">
       <AvatarImage src={HeadShot.src} alt="My head shot image" />
     </Avatar>
   );
@@ -54,7 +54,7 @@ function NavLogo() {
 
 export default function TopBar() {
   return (
-    <nav className="py-4 sticky top-0 left-0">
+    <nav className="py-4 sticky top-0 z-50 left-0">
       <div className="container">
         <div className="flex w-full justify-between items-center">
           <NavLogo />
