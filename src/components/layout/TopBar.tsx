@@ -57,7 +57,6 @@ export default function TopBar() {
   const { scrollY } = useScroll();
   const [isLogoVisible, setLogoVisible] = useState(false);
   useMotionValueEvent(scrollY, "change", (current) => {
-    console.log(current);
     if (current >= 250) {
       setLogoVisible(true);
     } else {
@@ -97,7 +96,7 @@ export default function TopBar() {
                   <NavLogo />
                   <p
                     className={cn(
-                      "text-white w-full text-lg font-semibold line-clamp-1",
+                      "text-white w-full text-lg text-start font-semibold line-clamp-1",
                       manrope.className
                     )}
                   >

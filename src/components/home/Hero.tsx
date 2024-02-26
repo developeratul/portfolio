@@ -41,7 +41,7 @@ export default function Hero() {
               problem, which is my area of expertise. I enjoy working with clients to transform
               their ideas into reality and help them generate revenue through the product.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="sm:flex grid grid-cols-2 items-center gap-4">
               <Button size="lg">View Recent Work</Button>
               <Button size="lg" variant="secondary">
                 Get in Touch
