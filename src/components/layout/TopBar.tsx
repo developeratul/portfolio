@@ -5,9 +5,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/
 import { manrope } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import { IconBrandGithub, IconBrandInstagram, IconBrandX, IconMenu2 } from "@tabler/icons-react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Button, buttonVariants } from "../ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
@@ -46,18 +47,43 @@ function NavLink(props: { children: ReactNode; href: string }) {
 
 function NavLogo() {
   return (
-    <Avatar className="border invisible">
+    <Avatar className="border">
       <AvatarImage src={HeadShot.src} alt="My head shot image" />
     </Avatar>
   );
 }
 
 export default function TopBar() {
+  const { scrollY } = useScroll();
+  const [isLogoVisible, setLogoVisible] = useState(false);
+  useMotionValueEvent(scrollY, "change", (current) => {
+    console.log(current);
+    if (current >= 250) {
+      setLogoVisible(true);
+    } else {
+      setLogoVisible(false);
+    }
+  });
+
   return (
     <nav className="py-4 sticky top-0 z-50 left-0">
       <div className="container">
         <div className="flex w-full justify-between items-center">
-          <NavLogo />
+          <AnimatePresence mode="wait">
+            <motion.div
+              initial={{
+                opacity: 1,
+              }}
+              animate={{
+                opacity: isLogoVisible ? 1 : 0,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              <NavLogo />
+            </motion.div>
+          </AnimatePresence>
 
           <Sheet>
             <SheetTrigger className="md:hidden" asChild>
